@@ -1,0 +1,5 @@
+- name: curl oh-my-zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  tags: [oh-my-zsh]
+  args:
+      creates: ~/.oh-my-zsh

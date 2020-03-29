@@ -1,0 +1,39 @@
+# https://github.com/jlund/ansible-go/
+- name: create golang install directory
+  file: path={{go_install_location}} state=directory
+
+- name: download golang
+  get_url:
+    url: "{{ go_download_location }}"
+    dest: "{{ go_install_location }}{{ go_tarball }}"
+
+- name: extract golang
+  unarchive:
+      src: "{{ go_install_location }}{{ go_tarball }}"
+      dest: "{{ go_install_location }}"
+      copy: no
+
+- name: install golang
+  shell: cp -r {{ go_install_location }}/go /usr/local/
+  args:
+      creates: /usr/local/go
+
+- name: check profile for golang zsh environment settings
+  command: "grep -q GOPATH {{ profile }}"
+  register: checkconfenv
+  check_mode: no
+  ignore_errors: yes
+  changed_when: no
+
+- name: configure golang zsh environment
+  shell: echo "export GOPATH=/root/work" >> {{ profile }} && echo "export PATH=$PATH:/usr/local/go/bin:/root/work/bin" >> {{ profile }}
+  when: checkconfenv.rc != 0
+
+- name: create golang working directory
+  file: path=~/work/src/ state=directory
+
+- name: Set golang environment for all users
+  copy: 
+    src: mkgolangenv.sh
+    dest: /etc/profile.d
+

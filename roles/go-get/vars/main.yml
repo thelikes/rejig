@@ -1,0 +1,52 @@
+---
+GOPATH: "/root/work/"
+PATH: "PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:/root/work/bin"
+
+go_get:
+    - name: gobuster
+      url: github.com/OJ/gobuster
+    - name: ffuf
+      url: github.com/ffuf/ffuf
+    - name: amass module
+      url: github.com/OWASP/Amass/v3/cmd/amass
+      GO111MODULE: "on"
+    - name: gwdomains module
+      url: github.com/fuzzerk/gwdomains
+      GO111MODULE: "on"
+    - name: fuzznav
+      url: github.com/fuzzerk/fuzznav
+      GO111MODULE: "on"
+    - name: subfinder
+      url: github.com/projectdiscovery/subfinder/cmd/subfinder
+    - name: httprobe
+      url: github.com/tomnomnom/httprobe
+    - name: meg
+      url: github.com/tomnomnom/meg
+    - name: assetfinder
+      url: github.com/tomnomnom/assetfinder
+    - name: waybackurls
+      url: github.com/tomnomnom/waybackurls
+    - name: unfurl
+      url: github.com/tomnomnom/unfurl
+    - name: fff
+      url: github.com/tomnomnom/hacks/fff
+    - name: gf
+      url: github.com/tomnomnom/gf
+    - name: anew
+      url: github.com/tomnomnom/anew
+    - name: gron
+      url: github.com/tomnomnom/gron
+    - name: html-tool
+      url: github.com/tomnomnom/hacks/html-tool
+    - name: tok
+      url: github.com/tomnomnom/hacks/tok
+    - name: gowitness
+      url: github.com/sensepost/gowitness
+    - name: webanalyze
+      url: github.com/rverton/webanalyze/...
+    - name: hakrawler
+      url: github.com/hakluke/hakrawler
+    - name: wildcheck
+      url: github.com/theblackturtle/wildcheck
+    - name: get-title
+      url: github.com/tomnomnom/hacks/get-title

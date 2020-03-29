@@ -1,0 +1,102 @@
+# Note: the 'name' value should match the github repo's name (including case)
+# Note #2: if the repo is a tool included in kali, make sure to remove the kali
+# version first
+git_repos:
+    - name: SecLists
+      url: https://github.com/danielmiessler/SecLists
+      branch: master
+      shell: "ln -s /opt/SecLists /"
+    - name: wfuzz
+      url: https://github.com/xmendez/wfuzz/
+      branch: dev
+      # purge in case the package is already there - we want the most up to date
+      shell: "apt purge wfuzz -y; cd /opt/wfuzz && pip install -r requirements.txt && python setup.py install"
+    - name: sqlmap
+      url: https://github.com/sqlmapproject/sqlmap
+      branch: master
+      shell: "apt purge sqlmap -y; ln -s /opt/sqlmap/sqlmap.py /usr/bin/sqlmap"
+    - name: Sublist3r
+      url: https://github.com/aboul3la/Sublist3r
+      branch: master
+      shell: "cd /opt/Sublist3r && pip install -r requirements.txt && python setup.py install"
+    - name: tplmap
+      url: https://github.com/epinna/tplmap
+      branch: master
+      shell: "cd /opt/tplmap && pip install -r requirements.txt"
+    - name: CrackMapExec
+      url:  https://github.com/byt3bl33d3r/CrackMapExec
+      recursive: yes
+      branch: master
+      shell: "ls"
+      # TODO fix this bullshit
+      #shell: "echo \"pip install -U pipenv\npipenv install\npipenv shell\npython setup.py install\" > /opt/CrackMapExec/prohib_install.txt"
+    - name: impacket
+      url:  https://github.com/SecureAuthCorp/impacket
+      recursive: yes
+      branch: master
+      shell: "ls"
+    - name: commix
+      url: https://github.com/commixproject/commix
+      branch: master
+      shell: "ls /opt/commix"
+    - name: parameth
+      url: https://github.com/maK-/parameth
+      branch: master
+      shell: "cd /opt/parameth && pip install -r requirements.txt"
+    - name: api_wordlist
+      url: https://github.com/chrislockard/api_wordlist
+      branch: master
+      shell: "ls /opt/api_wordlist"
+    - name: fuzz.txt
+      url: https://github.com/Bo0oM/fuzz.txt
+      branch: master
+      shell: "ls /opt/fuzz.txt/"
+    - name: dirsearch
+      url: https://github.com/nikallass/dirsearch
+      branch: master
+      shell: "ls /opt/dirsearch/"
+    - name: node-dirbuster
+      url: https://github.com/daviddias/node-dirbuster
+      branch: master
+      shell: "mkdir /usr/share/dirbuster && ln -s /opt/node-dirbuster/lists /usr/share/dirbuster/wordlists"
+      warn: False
+    - name: fuzzmost
+      url: https://github.com/thelikes/fuzzmost
+      branch: master
+      shell: "ls /opt/fuzzmost"
+    - name: wzrd
+      url: https://github.com/thelikes/wzrd
+      branch: master
+      shell: "ln -s /opt/wzrd/web/wzrd-gobuster.sh /usr/bin/"
+    - name: dnsgen
+      url: https://github.com/projectante/dnsgen
+      branch: master
+      shell: "cd /opt/dnsgen && pip3 install -r requirements.txt && python3 setup.py install"
+    - name: ShoScan
+      url: https://github.com/pathetiq/ShoScan
+      branch: master
+      shell: "cd /opt/ShoScan && pip install -r requirements.txt"
+    - name: fav-up
+      url: https://github.com/pielco11/fav-up
+      branch: master
+      shell: "cd /opt/fav-up && pip3 install -r requirements.txt"
+    - name: massdns
+      url: https://github.com/blechschmidt/massdns
+      branch: master
+      shell: "cd /opt/massdns && make"
+    - name: LinkFinder
+      url: https://github.com/GerbenJavado/LinkFinder
+      branch: master
+      shell: "cd /opt/LinkFinder && pip install -r requirements.txt && python setup.py install"
+    - name: cc.py
+      url: https://github.com/si9int/cc.py
+      branch: master
+      shell: "ls /opt/cc.py"
+    - name: Arjun
+      url: https://github.com/s0md3v/Arjun
+      branch: master
+      shell: "ls /opt/Arjun"
+    - name: pathbrute
+      url: https://github.com/milo2012/pathbrute
+      branch: master
+      shell: "ls /opt/pathbrute"

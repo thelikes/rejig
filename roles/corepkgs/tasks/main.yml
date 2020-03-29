@@ -1,0 +1,131 @@
+- name: install zsh
+  apt:
+      name: zsh
+      state: present
+
+- name: install tmux
+  apt:
+      name: tmux
+      state: present
+
+- name: install python
+  apt:
+      name: python
+      state: present
+
+- name: install python-pip
+  apt:
+      name: python-pip
+      state: present
+
+- name: install python3
+  apt:
+      name: python3
+      state: present
+
+- name: install python3-pip
+  apt:
+      name: python3-pip
+      state: present
+
+# wfuzz apt install libcurl4-openssl-dev libssl-dev
+- name: install libcurl4-openssl-dev 
+  apt:
+      name: libcurl4-openssl-dev
+      state: present
+
+- name: install libssl-dev
+  apt:
+      name: libssl-dev
+      state: present
+
+- name: install tree
+  apt:
+      name: tree
+      state: present
+
+- name: install nmap
+  apt:
+      name: nmap
+      state: present
+
+- name: install nfs-common
+  apt:
+      name: nfs-common
+      state: present
+
+- name: install gnome-screenshot
+  apt:
+      name: gnome-screenshot
+      state: present
+
+- name: install libffi-dev
+  apt:
+      name: libffi-dev
+      state: present
+
+- name: install python-dev
+  apt:
+      name: python-dev
+      state: present
+
+- name: install build-essential
+  apt:
+      name: build-essential
+      state: present
+
+- name: install whois
+  apt:
+      name: whois
+      state: present
+
+- name: install proxychains
+  apt:
+      name: proxychains
+      state: present
+
+- name: install ack-grep
+  apt:
+      name: ack-grep
+      state: present
+
+- name: install hydra
+  apt:
+      name: hydra
+      state: present
+
+- name: install jq
+  apt:
+      name: jq
+      state: present
+
+- name: install chromium-browser
+  apt:
+      name: chromium-browser
+      state: present
+
+- name: install socat
+  apt:
+      name: socat
+      state: present
+
+- name: install dos2unix
+  apt:
+      name: dos2unix
+      state: present
+
+- name: install html2text
+  apt:
+      name: html2text
+      state: present
+
+- name: install unzip
+  apt:
+      name: unzip
+      state: present
+
+# TODO
+# rm:
+# sqlmap
+# wfuzz ?
+#

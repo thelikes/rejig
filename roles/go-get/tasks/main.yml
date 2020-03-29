@@ -1,0 +1,10 @@
+# https://github.com/fubarhouse/ansible-role-golang
+#
+- name: "go-get"
+  shell: "go get -u {{ item.url }}"
+  environment:
+      GOPATH: "{{ GOPATH }}"
+      PATH: "{{ PATH }}"
+      GO111MODULE: "{{ item.GO111MODULE }}"
+  with_items: "{{ go_get }}"
+  #changed_when: false

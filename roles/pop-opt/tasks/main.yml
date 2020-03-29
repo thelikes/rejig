@@ -1,0 +1,14 @@
+- name: clone
+  git: 
+      repo: "{{ item.url }}"
+      dest: "/opt/{{ item.name }}"
+      #clone: no
+      update: yes
+      version: "{{ item.branch }}"
+  with_items:
+      - "{{ git_repos }}"
+
+- name: post clone configuration
+  shell: "{{ item.shell }}"
+  with_items:
+      - "{{ git_repos }}"
