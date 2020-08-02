@@ -18,12 +18,112 @@ Box name can be named in `~/.ssh/config`
 
 ## Current Tasks
 
-### OS Update
-1. System update - update, upgrade, reboot and wait
-2. Install core system packages - zsh,tmux,python,python-pip,python3,python3-pip,libcurl4-openssl-dev,libssl-dev,tree,nmap,nfs-common,gnome-screenshot,libffi-dev,python-dev,build-essential,whois,proxychains,ack-grep,hydra,jq,chromium-browser,socat,dos2unix,html2text,unzip
-3. Install oh-my-zsh (its better than what you're using)
+1. Update the OS
+2. Install core packages
+3. Install golang
+4. Install golang tools
+5. Populate /opt with various github repositories
+6. Install zsh, oh-my-zsh, and my dotfiles
 
-### Attack
-1. Install go - go1.13.7.linux-amd64.tar.gz
-2. Install go tools - gobuster,ffuf,amass,gwdomains,fuzznav,subfinder,httprobe,meg,assetfinder,waybackurls,unfurl,fff,gf,anew,gron,html-tool,tok,gowitness,webanalyze,hakrawler,wildcheck,get-title
-3. Populate /opt/  - SecLists,wfuzz,sqlmap,Sublist3r,tplmap,CrackMapExec,impacket,commix,parameth,api_wordlist,fuzz.txt,dirsearch,node-dirbuster,fuzzmost,wzrd,dnsgen,ShoScan,fav-up,massdns,LinkFinder,cc.py,Arjun,pathbrute
+## Specifics
+
+### Core packages
+
+    - zsh
+    - tmux
+    - python
+    - python-pip
+    - python3
+    - python3-pip
+    - libcurl4-openssl-dev
+    - libssl-dev
+    - tree
+    - nmap
+    - nfs-common
+    - gnome-screenshot
+    - libffi-dev
+    - python-dev
+    - build-essential
+    - whois
+    - proxychains
+    - ack-grep
+    - hydra
+    - jq
+    - chromium-browser
+    - socat
+    - dos2unix
+    - html2text
+    - unzip
+    - john
+
+### Go tools
+
+    - github.com/OJ/gobuster
+    - github.com/ffuf/ffuf
+    - github.com/OWASP/Amass/v3/...
+    - github.com/thelikes/fuzznav
+    - github.com/projectdiscovery/subfinder/cmd/subfinder
+    - github.com/tomnomnom/httprobe
+    - github.com/tomnomnom/meg
+    - github.com/tomnomnom/assetfinder
+    - github.com/tomnomnom/waybackurls
+    - github.com/tomnomnom/unfurl
+    - github.com/tomnomnom/fff
+    - github.com/tomnomnom/gf
+    - github.com/tomnomnom/anew
+    - github.com/tomnomnom/gron
+    - github.com/tomnomnom/hacks/html-tool
+    - github.com/tomnomnom/hacks/tok
+    - github.com/rverton/webanalyze/...
+    - github.com/hakluke/hakrawler
+    - github.com/theblackturtle/wildcheck
+    - github.com/tomnomnom/hacks/get-title
+    - github.com/jaeles-project/gospider
+    - github.com/lc/gau
+    - github.com/glebarez/cero
+    - github.com/projectdiscovery/nuclei
+    - github.com/projectdiscovery/httpx/cmd/httpx
+
+### Github repos
+
+    - github.com/danielmiessler/SecLists
+    - github.com/xmendez/wfuzz/
+    - github.com/sqlmapproject/sqlmap
+    - github.com/aboul3la/Sublist3r
+    - github.com/epinna/tplmap
+    - github.com/byt3bl33d3r/CrackMapExec
+    - github.com/SecureAuthCorp/impacket
+    - github.com/commixproject/commix
+    - github.com/maK-/parameth
+    - github.com/chrislockard/api_wordlist
+    - github.com/Bo0oM/fuzz.txt
+    - github.com/nikallass/dirsearch
+    - github.com/daviddias/node-dirbuster
+    - github.com/thelikes/fuzzmost
+    - github.com/thelikes/wzrd
+    - github.com/projectante/dnsgen
+    - github.com/pathetiq/ShoScan
+    - github.com/pielco11/fav-up
+    - github.com/blechschmidt/massdns
+    - github.com/GerbenJavado/LinkFinder
+    - github.com/si9int/cc.py
+    - github.com/s0md3v/Arjun
+    - github.com/milo2012/pathbrute
+    - github.com/staaldraad/xxeserv
+    - github.com/ptoomey3/evilarc
+    - github.com/almandin/fuxploider
+    - github.com/Sab0tag3d/SIET
+    - github.com/codingo/NoSQLMap
+    - github.com/D35m0nd142/LFISuite
+    - github.com/ggabarrin/requestify
+    - github.com/rebootuser/LinEnum
+    - github.com/Arr0way/linux-local-enumeration-script
+    - github.com/InteliSecureLabs/Linux_Exploit_Suggester
+    - github.com/n00py/Hwacha
+    - github.com/projectdiscovery/nuclei-templates
+    - github.com/gwen001/github-search
+    - github.com/Greenwolf/Spray
+    - github.com/FlameOfIgnis/Pwdb-Public
+    - github.com/dirkjanm/ldapdomaindump
+    - github.com/fuzzdb-project/fuzzdb
+    - github.com/tennc/fuzzdb
