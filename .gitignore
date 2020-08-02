@@ -3,3 +3,4 @@
 *.retry
 hosts-mine
 tfatk/secrets.tf
+.terraform
