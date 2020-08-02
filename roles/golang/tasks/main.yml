@@ -26,11 +26,11 @@
   changed_when: no
 
 - name: configure golang zsh environment
-  shell: echo "export GOPATH=/root/work" >> {{ profile }} && echo "export PATH=$PATH:/usr/local/go/bin:/root/work/bin" >> {{ profile }}
+  shell: echo "export GOPATH=/usr/share/go-work" >> {{ profile }} && echo "export PATH=$PATH:/usr/local/go/bin:/usr/share/go-work/bin" >> {{ profile }}
   when: checkconfenv.rc != 0
 
 - name: create golang working directory
-  file: path=~/work/src/ state=directory
+  file: path=/usr/share/go-work/src/ state=directory
 
 - name: Set golang environment for all users
   copy: 
