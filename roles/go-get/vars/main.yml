@@ -1,52 +1,94 @@
 ---
-GOPATH: "/root/work/"
-PATH: "PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:/root/work/bin"
+GOPATH: "/usr/share/go-work/"
+PATH: "PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:/usr/share/go-work/bin"
+
+aquatone_download_location: "https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip"
+aquatone_install_location: "/opt/install-aquatone"
+aquatone_archive: "aquatone_linux_amd64_1.7.0.zip"
 
 go_get:
     - name: gobuster
       url: github.com/OJ/gobuster
+      shell: "ls /usr/share/go-work/bin/"
     - name: ffuf
       url: github.com/ffuf/ffuf
+      shell: "ls /usr/share/go-work/bin/"
     - name: amass module
-      url: github.com/OWASP/Amass/v3/cmd/amass
+      url: github.com/OWASP/Amass/v3/...
       GO111MODULE: "on"
-    - name: gwdomains module
-      url: github.com/fuzzerk/gwdomains
-      GO111MODULE: "on"
+      shell: "cd /usr/share/go-work/src/github.com/OWASP/Amass/ && /usr/local/go/bin/go install ./..."
+#    - name: gwdomains module
+#      url: github.com/thelikes/gwdomains
+#      GO111MODULE: "on"
     - name: fuzznav
-      url: github.com/fuzzerk/fuzznav
+      url: github.com/thelikes/fuzznav
       GO111MODULE: "on"
+      shell: "ls /usr/share/go-work/bin/"
     - name: subfinder
       url: github.com/projectdiscovery/subfinder/cmd/subfinder
+      shell: "ls /usr/share/go-work/bin/"
     - name: httprobe
       url: github.com/tomnomnom/httprobe
+      shell: "ls /usr/share/go-work/bin/"
     - name: meg
       url: github.com/tomnomnom/meg
+      shell: "ls /usr/share/go-work/bin/"
     - name: assetfinder
       url: github.com/tomnomnom/assetfinder
+      shell: "ls /usr/share/go-work/bin/"
     - name: waybackurls
       url: github.com/tomnomnom/waybackurls
+      shell: "ls /usr/share/go-work/bin/"
     - name: unfurl
       url: github.com/tomnomnom/unfurl
+      shell: "ls /usr/share/go-work/bin/"
     - name: fff
-      url: github.com/tomnomnom/hacks/fff
+      url: github.com/tomnomnom/fff
+      shell: "ls /usr/share/go-work/bin/"
     - name: gf
       url: github.com/tomnomnom/gf
+      shell: "ls /usr/share/go-work/bin/"
     - name: anew
       url: github.com/tomnomnom/anew
+      shell: "ls /usr/share/go-work/bin/"
     - name: gron
       url: github.com/tomnomnom/gron
+      shell: "ls /usr/share/go-work/bin/"
     - name: html-tool
       url: github.com/tomnomnom/hacks/html-tool
+      shell: "ls /usr/share/go-work/bin/"
     - name: tok
       url: github.com/tomnomnom/hacks/tok
-    - name: gowitness
-      url: github.com/sensepost/gowitness
+      shell: "ls /usr/share/go-work/bin/"
+#    - name: gowitness
+#      url: github.com/sensepost/gowitness
+#      shell: "ls /usr/share/go-work/bin/"
     - name: webanalyze
       url: github.com/rverton/webanalyze/...
+      shell: "ls /usr/share/go-work/bin/"
     - name: hakrawler
       url: github.com/hakluke/hakrawler
+      shell: "ls /usr/share/go-work/bin/"
     - name: wildcheck
       url: github.com/theblackturtle/wildcheck
+      shell: "ls /usr/share/go-work/bin/"
     - name: get-title
       url: github.com/tomnomnom/hacks/get-title
+      shell: "ls /usr/share/go-work/bin/"
+    - name: gospider
+      url: github.com/jaeles-project/gospider
+      shell: "ls /usr/share/go-work/bin/"
+    - name: gau
+      url: github.com/lc/gau
+      shell: "mv /usr/share/go-work/bin/gau /usr/share/go-work/bin/getallurls"
+    - name: cero
+      url: github.com/glebarez/cero
+      shell: "ls /usr/share/go-work/bin/"
+    - name: nuclei
+      url: github.com/projectdiscovery/nuclei
+      GO111MODULE: "on"
+      shell: "ls /usr/share/go-work/bin/"
+    - name: httpx
+      url: github.com/projectdiscovery/httpx/cmd/httpx
+      GO111MODULE: "on"
+      shell: "ls /usr/share/go-work/bin/"
