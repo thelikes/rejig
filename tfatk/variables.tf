@@ -11,7 +11,7 @@ variable "recon_img_name" {
 }
 
 variable "recon_count" {
-    default = 0
+    default = 1
 } 
 
 variable "hq_img_name" {

@@ -18,31 +18,26 @@ Where the hosts file looks like:
 box_name ansible_python_interpreter=/usr/bin/python3
 ```
 
+Box name can be named in `~/.ssh/config`
+
 ### Terraform
 
 1. Edit tfatk/variables.tf
 2. Initialize
-
     ```
     # initialize
     $ terraform init
     ```
-
 3. Dry run
-
     ```
     # plan changes
     $ terraform plan
     ```
-
 4. Execute
-
     ```
     # apply
     $ terraform apply
     ```
-
-Box name can be named in `~/.ssh/config`
 
 ## Current Tasks
 
