@@ -103,6 +103,7 @@
   apt:
       name: chromium-browser
       state: present
+  ignore_errors: yes
 
 - name: install socat
   apt:
@@ -122,6 +123,11 @@
 - name: install unzip
   apt:
       name: unzip
+      state: present
+
+- name: install john the ripper
+  apt:
+      name: john
       state: present
 
 # TODO
