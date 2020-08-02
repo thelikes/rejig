@@ -1,3 +1,15 @@
+# repo url var
+satellite_url: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          66396537303335653635366230313062353231613132333936383837643535376534643261353037
+          6161366264363139386264633036333963313933653763300a383238336138366530386362343435
+          65343530326161343761386339386366393266303732363438306633396363383531666263323731
+          3638303331666431620a333465666561353866303438393261613238353632373032653463316162
+          34306163663964333864323134396363303731643333383138656337393266623062306535636631
+          32313564386138336138636231373636343565303463353334313035356264313132323662643965
+          31376264663939306461383837396531666366343034656336323061626361373132646339353130
+          61646531633635663932
+
 # Note: the 'name' value should match the github repo's name (including case)
 # Note #2: if the repo is a tool included in kali, make sure to remove the kali
 # version first
@@ -10,7 +22,8 @@ git_repos:
       url: https://github.com/xmendez/wfuzz/
       branch: dev
       # purge in case the package is already there - we want the most up to date
-      shell: "apt purge wfuzz -y; cd /opt/wfuzz && pip install -r requirements.txt && python setup.py install"
+      #shell: "apt purge wfuzz -y; cd /opt/wfuzz && pip install -r requirements.txt && python setup.py install"
+      shell: "apt purge wfuzz -y; ls /opt/wfuzz"
     - name: sqlmap
       url: https://github.com/sqlmapproject/sqlmap
       branch: master
@@ -19,19 +32,23 @@ git_repos:
       url: https://github.com/aboul3la/Sublist3r
       branch: master
       shell: "cd /opt/Sublist3r && pip install -r requirements.txt && python setup.py install"
+    - name: satellite
+      url: "{{ satellite_url }}"
+      branch: master
+      shell: "ls /opt/satellite"
     - name: tplmap
       url: https://github.com/epinna/tplmap
       branch: master
       shell: "cd /opt/tplmap && pip install -r requirements.txt"
     - name: CrackMapExec
-      url:  https://github.com/byt3bl33d3r/CrackMapExec
+      url: https://github.com/byt3bl33d3r/CrackMapExec
       recursive: yes
       branch: master
       shell: "ls"
       # TODO fix this bullshit
       #shell: "echo \"pip install -U pipenv\npipenv install\npipenv shell\npython setup.py install\" > /opt/CrackMapExec/prohib_install.txt"
     - name: impacket
-      url:  https://github.com/SecureAuthCorp/impacket
+      url: https://github.com/SecureAuthCorp/impacket
       recursive: yes
       branch: master
       shell: "ls"
@@ -100,3 +117,75 @@ git_repos:
       url: https://github.com/milo2012/pathbrute
       branch: master
       shell: "ls /opt/pathbrute"
+    - name: xxeserv
+      url: https://github.com/staaldraad/xxeserv
+      branch: master
+      shell: "ls /opt"
+    - name: evilarc
+      url: https://github.com/ptoomey3/evilarc
+      branch: master
+      shell: "ls /opt"
+    - name: fuxploider
+      url: https://github.com/almandin/fuxploider
+      branch: master
+      shell: "ls /opt"
+    - name: SIET
+      url: https://github.com/Sab0tag3d/SIET
+      branch: master
+      shell: "ls /opt"
+    - name: NoSQLMap
+      url: https://github.com/codingo/NoSQLMap
+      branch: master
+      shell: "ls /opt"
+    - name: LFISuite
+      url: https://github.com/D35m0nd142/LFISuite
+      branch: master
+      shell: "ls /opt"
+    - name: requestify
+      url: https://github.com/ggabarrin/requestify
+      branch: master
+      shell: "ls /opt"
+    - name: LinEnum
+      url: https://github.com/rebootuser/LinEnum
+      branch: master
+      shell: "ls /opt"
+    - name: linux-local-enumeration-script
+      url: https://github.com/Arr0way/linux-local-enumeration-script
+      branch: master
+      shell: "ls /opt"
+    - name: Linux_Exploit_Suggester
+      url: https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
+      branch: master
+      shell: "ls /opt"
+    - name: Hwacha
+      url: https://github.com/n00py/Hwacha
+      branch: master
+      shell: "ls /opt"
+    - name: nuclei-templates
+      url: https://github.com/projectdiscovery/nuclei-templates
+      branch: master
+      shell: "ls /opt"
+    - name: github-search
+      url: https://github.com/gwen001/github-search
+      branch: master
+      shell: "cd /opt/github-search && pip3 install -r requirements3.txt"
+    - name: Spray
+      url: https://github.com/Greenwolf/Spray
+      branch: master
+      shell: "ls /opt"
+    - name: Pwdb-Public
+      url: https://github.com/FlameOfIgnis/Pwdb-Public
+      branch: master
+      shell: "ls /opt"
+    - name: ldapdomaindump
+      url: https://github.com/dirkjanm/ldapdomaindump
+      branch: master
+      shell: "ls /opt"
+    - name: fuzzdb
+      url: https://github.com/fuzzdb-project/fuzzdb
+      branch: master
+      shell: "ls /opt"
+    - name: tennc-fuzzdb
+      url: https://github.com/tennc/fuzzdb
+      branch: master
+      shell: "ls /opt"
