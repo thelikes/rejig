@@ -7,4 +7,30 @@
       PATH: "{{ PATH }}"
       GO111MODULE: "{{ item.GO111MODULE }}"
   with_items: "{{ go_get }}"
+  ignore_errors: yes
   #changed_when: false
+
+- name: post install configuration
+  shell: "{{ item.shell}} "
+  with_items:
+      - "{{ go_get }}"
+  ignore_errors: yes
+
+- name: create aquatone install directory
+  file: path={{aquatone_install_location}} state=directory
+
+- name: download aquatone
+  get_url:
+    url: "{{ aquatone_download_location }}"
+    dest: "{{ aquatone_install_location }}{{ aquatone_archive }}"
+
+- name: extract aquatone
+  unarchive:
+      src: "{{ aquatone_install_location }}{{ aquatone_archive }}"
+      dest: "{{ aquatone_install_location }}"
+      copy: no
+
+- name: install aquatone
+  shell: cp -r {{ aquatone_install_location }}/aquatone /usr/share/go-work/bin/
+  args:
+      creates: /usr/share/go-work/bin/aquatone
