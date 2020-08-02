@@ -3,7 +3,7 @@ variable "scanner_img_name" {
 }
 
 variable "scanner_count" {
-    default = 2
+    default = 0
 } 
 
 variable "recon_img_name" {
@@ -11,7 +11,7 @@ variable "recon_img_name" {
 }
 
 variable "recon_count" {
-    default = 2
+    default = 0
 } 
 
 variable "hq_img_name" {
@@ -19,5 +19,5 @@ variable "hq_img_name" {
 }
 
 variable "hq_count" {
-    default = 2
+    default = 0
 }
