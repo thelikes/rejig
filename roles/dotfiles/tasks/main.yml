@@ -1,0 +1,20 @@
+- name: clone dotfiles
+  git: 
+    repo: 'https://github.com/thelikes/dotfiles'
+    dest: /opt/dotfiles
+
+- name: configure tmux
+  shell: cp /opt/dotfiles/.tmux.conf ~/.tmux.conf
+  args:
+      creates: ~/.tmux.conf
+
+- name: run setup-vim.sh
+  shell: cd /opt/dotfiles && ./setup-vim.sh
+  args:
+      creates: ~/.vim/bundle
+
+- name: run setup-zsh.sh
+  shell: cd /opt/dotfiles && ./setup-zsh.sh
+# TODO register the command ran successfully based on stdout
+#  args:
+#      creates: ~/.zshrc

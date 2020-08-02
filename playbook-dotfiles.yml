@@ -1,0 +1,4 @@
+- hosts: "{{ hosts }}"
+  roles: 
+   - oh-my-zsh
+   - dotfiles
