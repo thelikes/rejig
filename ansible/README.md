@@ -127,3 +127,24 @@ Box name can be named in `~/.ssh/config`
     - github.com/dirkjanm/ldapdomaindump
     - github.com/fuzzdb-project/fuzzdb
     - github.com/tennc/fuzzdb
+
+## To do
+
+### evaluate / implement 
+
+- [ ] bypass-firewalls-by-DNS-history
+- [ ] cloudflare_enum
+- [ ] spoofcheck
+- [ ] msf
+- [ ] wpscan
+- [ ] [dnstwist](https://github.com/elceef/dnstwist)
+- [ ] [wordlistgen](https://github.com/ameenmaali/wordlistgen)
+- [ ] [pathbrute](https://github.com/milo2012/pathbrute)
+- [ ] [shuffledns](https://github.com/projectdiscovery/shuffledns)
+- [ ] [fuzzdb](https://github.com/fuzzdb-project/fuzzdb)
+- [ ] [dns validator](https://github.com/vortexau/dnsvalidator)
+- [ ] [crithit](https://github.com/codingo/crithit)
+- [ ] [minidump](https://github.com/Mr-Un1k0d3r/MiniDump)
+- [ ] [atlas - sqlmap tamper discovery](https://github.com/m4ll0k/Atlas)
+- [ ] [fprobe](https://github.com/theblackturtle/fprobe)
+- [ ] [zgrab](https://github.com/zmap/zgrab2)
