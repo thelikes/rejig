@@ -22,18 +22,30 @@ Box name can be named in `~/.ssh/config`
 
 ### Terraform
 
-1. Edit tfatk/variables.tf
-2. Initialize
+1. Edit tfatk/variables.tf to configure system names and counts
+2. Create secrets.tf to provide provider credentials
+
+    ```
+    provider "digitalocean" {
+        token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+
+    variable "mykey" {
+        description = "do key id"
+        default = [xxxxxxxx]
+    }
+    ```
+3. Initialize
     ```
     # initialize
     $ terraform init
     ```
-3. Dry run
+4. Dry run
     ```
     # plan changes
     $ terraform plan
     ```
-4. Execute
+5. Execute
     ```
     # apply
     $ terraform apply
