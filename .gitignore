@@ -2,3 +2,4 @@
 .*.swp
 *.retry
 hosts-mine
+tfatk/secrets.tf
