@@ -26,8 +26,18 @@ box_name ansible_python_interpreter=/usr/bin/python3
     ```
     # initialize
     $ terraform init
+    ```
+
+3. Dry run
+
+    ```
     # plan changes
     $ terraform plan
+    ```
+
+4. Execute
+
+    ```
     # apply
     $ terraform apply
     ```
