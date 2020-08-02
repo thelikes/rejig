@@ -4,22 +4,6 @@ An ansible+terraform suite to spawn and provision a virtual machine for attack p
 
 ## How To
 
-### Ansible
-
-To use, install Ansible, configure your hosts file and run the following
-command. Ansible will remotely configure the box for offensive attack purposes. 
-
-` ansible-playbook -i hosts --extra-vars "hosts=remote" playbook-bun2atk.yml`
-
-Where the hosts file looks like:
-
-```
-[remote]
-box_name ansible_python_interpreter=/usr/bin/python3
-```
-
-Box name can be named in `~/.ssh/config`
-
 ### Terraform
 
 1. Edit tfatk/variables.tf to configure system names and counts
@@ -51,7 +35,24 @@ Box name can be named in `~/.ssh/config`
     $ terraform apply
     ```
 
-## Current Tasks
+
+### Ansible
+
+To use, install Ansible, configure your hosts file and run the following
+command. Ansible will remotely configure the box for offensive attack purposes. 
+
+` ansible-playbook -i hosts --extra-vars "hosts=remote" playbook-bun2atk.yml`
+
+Where the hosts file looks like:
+
+```
+[remote]
+box_name ansible_python_interpreter=/usr/bin/python3
+```
+
+Box name can be named in `~/.ssh/config`
+
+#### Current Tasks
 
 1. Update the OS
 2. Install core packages
@@ -60,9 +61,9 @@ Box name can be named in `~/.ssh/config`
 5. Populate /opt with various github repositories
 6. Install zsh, oh-my-zsh, and my dotfiles
 
-## Specifics
+#### Specifics
 
-### Core packages
+##### Core packages
 
     - zsh
     - tmux
@@ -91,7 +92,7 @@ Box name can be named in `~/.ssh/config`
     - unzip
     - john
 
-### Go tools
+##### Go tools
 
     - github.com/OJ/gobuster
     - github.com/ffuf/ffuf
@@ -119,7 +120,7 @@ Box name can be named in `~/.ssh/config`
     - github.com/projectdiscovery/nuclei
     - github.com/projectdiscovery/httpx/cmd/httpx
 
-### Github repos
+##### Github repos
 
     - github.com/danielmiessler/SecLists
     - github.com/xmendez/wfuzz/
@@ -163,9 +164,9 @@ Box name can be named in `~/.ssh/config`
     - github.com/fuzzdb-project/fuzzdb
     - github.com/tennc/fuzzdb
 
-## To do
+#### To do
 
-### evaluate / implement 
+##### evaluate / implement 
 
 - [ ] bypass-firewalls-by-DNS-history
 - [ ] cloudflare_enum
