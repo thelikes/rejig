@@ -4,3 +4,4 @@
 hosts-mine
 tfatk/secrets.tf
 .terraform
+terraform.tfstate
