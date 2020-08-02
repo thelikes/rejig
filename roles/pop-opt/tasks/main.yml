@@ -7,8 +7,10 @@
       version: "{{ item.branch }}"
   with_items:
       - "{{ git_repos }}"
+  ignore_errors: yes
 
 - name: post clone configuration
   shell: "{{ item.shell }}"
   with_items:
       - "{{ git_repos }}"
+  ignore_errors: yes
