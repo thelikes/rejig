@@ -1,6 +1,10 @@
 # rejig
 
-A suite of ansible scripts to transform a box for attack purposes
+An ansible+terraform suite to spawn and provision a virtual machine for attack purposes.
+
+## How To
+
+### Ansible
 
 To use, install Ansible, configure your hosts file and run the following
 command. Ansible will remotely configure the box for offensive attack purposes. 
@@ -13,6 +17,20 @@ Where the hosts file looks like:
 [remote]
 box_name ansible_python_interpreter=/usr/bin/python3
 ```
+
+### Terraform
+
+1. Edit tfatk/variables.tf
+2. Initialize
+
+    ```
+    # initialize
+    $ terraform init
+    # plan changes
+    $ terraform plan
+    # apply
+    $ terraform apply
+    ```
 
 Box name can be named in `~/.ssh/config`
 
