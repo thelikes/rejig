@@ -8,7 +8,6 @@
       GO111MODULE: "{{ item.GO111MODULE }}"
   with_items: "{{ go_get }}"
   ignore_errors: yes
-  #changed_when: false
 
 - name: post install configuration
   shell: "{{ item.shell}} "
@@ -16,6 +15,21 @@
       - "{{ go_get }}"
   ignore_errors: yes
 
+#
+# fucking amass is special
+#
+- name: "go-get-special"
+  shell: "go get -v {{ item.url }}"
+  environment:
+      GOPATH: "{{ GOPATH }}"
+      PATH: "{{ PATH }}"
+      GO111MODULE: "{{ item.GO111MODULE }}"
+  with_items: "{{ go_get_special }}"
+  ignore_errors: yes
+
+#
+# aquatone
+#
 - name: create aquatone install directory
   file: path={{aquatone_install_location}} state=directory
 

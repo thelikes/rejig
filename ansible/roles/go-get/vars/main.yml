@@ -6,6 +6,12 @@ aquatone_download_location: "https://github.com/michenriksen/aquatone/releases/d
 aquatone_install_location: "/opt/install-aquatone"
 aquatone_archive: "aquatone_linux_amd64_1.7.0.zip"
 
+go_get_special:
+    - name: amass module
+      url: github.com/OWASP/Amass/v3/...
+      GO111MODULE: "on"
+      shell: "ls /usr/share/go-work/bin"
+
 go_get:
     - name: gobuster
       url: github.com/OJ/gobuster
@@ -13,10 +19,6 @@ go_get:
     - name: ffuf
       url: github.com/ffuf/ffuf
       shell: "ls /usr/share/go-work/bin/"
-    - name: amass module
-      url: github.com/OWASP/Amass/v3/...
-      GO111MODULE: "on"
-      shell: "cd /usr/share/go-work/src/github.com/OWASP/Amass/ && /usr/local/go/bin/go install ./..."
 #    - name: gwdomains module
 #      url: github.com/thelikes/gwdomains
 #      GO111MODULE: "on"
