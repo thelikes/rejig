@@ -63,7 +63,7 @@ Box name can be named in `~/.ssh/config`
 
 #### Specifics
 
-##### Core packages
+### Core packages
 
     - zsh
     - tmux
@@ -92,11 +92,11 @@ Box name can be named in `~/.ssh/config`
     - unzip
     - john
 
-##### Go tools
+### Go tools
 
+    - github.com/OWASP/Amass/v3/...
     - github.com/OJ/gobuster
     - github.com/ffuf/ffuf
-    - github.com/OWASP/Amass/v3/...
     - github.com/thelikes/fuzznav
     - github.com/projectdiscovery/subfinder/cmd/subfinder
     - github.com/tomnomnom/httprobe
@@ -119,8 +119,11 @@ Box name can be named in `~/.ssh/config`
     - github.com/glebarez/cero
     - github.com/projectdiscovery/nuclei
     - github.com/projectdiscovery/httpx/cmd/httpx
+    - github.com/003random/getJS
+    - github.com/tomnomnom/hacks/anti-burl
+    - github.com/pry0cc/subgen
 
-##### Github repos
+### Github repos
 
     - github.com/danielmiessler/SecLists
     - github.com/xmendez/wfuzz/
@@ -163,6 +166,7 @@ Box name can be named in `~/.ssh/config`
     - github.com/dirkjanm/ldapdomaindump
     - github.com/fuzzdb-project/fuzzdb
     - github.com/tennc/fuzzdb
+    - github.com/vortexau/dnsvalidator
 
 #### To do
 
@@ -184,3 +188,4 @@ Box name can be named in `~/.ssh/config`
 - [ ] [atlas - sqlmap tamper discovery](https://github.com/m4ll0k/Atlas)
 - [ ] [fprobe](https://github.com/theblackturtle/fprobe)
 - [ ] [zgrab](https://github.com/zmap/zgrab2)
+

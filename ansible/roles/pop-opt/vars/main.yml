@@ -189,3 +189,7 @@ git_repos:
       url: https://github.com/tennc/fuzzdb
       branch: master
       shell: "ls /opt"
+    - name: dnsvalidator
+      url: https://github.com/vortexau/dnsvalidator
+      branch: master
+      shell: "cd /opt/dnsvalidator && python3 setup.py install"
