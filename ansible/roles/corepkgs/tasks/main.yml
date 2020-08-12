@@ -140,6 +140,16 @@
       name:  postgresql-contrib
       state: present
 
+- name: install vim
+  apt:
+      name:  vim
+      state: present
+
+- name: install rsync
+  apt:
+      name:  rsync
+      state: present
+
 # TODO
 # rm:
 # sqlmap
