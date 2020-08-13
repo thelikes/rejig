@@ -150,6 +150,21 @@
       name:  rsync
       state: present
 
+- name: install curl
+  apt:
+      name:  curl
+      state: present
+
+- name: install git
+  apt:
+      name:  git
+      state: present
+
+- name: install unattended-upgrades
+  apt:
+      name:  unattended-upgrades
+      state: present
+
 # TODO
 # rm:
 # sqlmap
