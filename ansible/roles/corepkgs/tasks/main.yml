@@ -140,6 +140,11 @@
       name:  postgresql-contrib
       state: present
 
+- name: install mysql-server
+  apt:
+      name:  mysql-server
+      state: present
+
 - name: install vim
   apt:
       name:  vim
