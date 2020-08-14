@@ -170,6 +170,16 @@
       name:  unattended-upgrades
       state: present
 
+- name: hydra
+  apt:
+      name:  medusa
+      state: present
+
+- name: hydra
+  apt:
+      name:  medusa
+      state: present
+
 # TODO
 # rm:
 # sqlmap
