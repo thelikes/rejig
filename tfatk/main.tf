@@ -2,7 +2,7 @@ resource "digitalocean_droplet" "scanner" {
   ssh_keys           = var.mykey
   image              = "ubuntu-18-04-x64"
   region             = "nyc3"
-  size               = "s-1vcpu-1gb"
+  size               = "s-2vcpu-2gb"
   private_networking = true
   backups            = false
   ipv6               = true
@@ -15,7 +15,7 @@ resource "digitalocean_droplet" "recon" {
   ssh_keys           = var.mykey
   image              = "ubuntu-18-04-x64"
   region             = "nyc3"
-  size               = "s-1vcpu-1gb"
+  size               = "s-2vcpu-4gb"
   private_networking = true
   backups            = false
   ipv6               = true
