@@ -132,52 +132,52 @@
 
 - name: install postgresql
   apt:
-      name:  postgresql
+      name: postgresql
       state: present
 
 - name: install postgresql-contrib
   apt:
-      name:  postgresql-contrib
+      name: postgresql-contrib
       state: present
 
 - name: install mysql-server
   apt:
-      name:  mysql-server
+      name: mysql-server
       state: present
 
 - name: install vim
   apt:
-      name:  vim
+      name: vim
       state: present
 
 - name: install rsync
   apt:
-      name:  rsync
+      name: rsync
       state: present
 
 - name: install curl
   apt:
-      name:  curl
+      name: curl
       state: present
 
 - name: install git
   apt:
-      name:  git
+      name: git
       state: present
 
 - name: install unattended-upgrades
   apt:
-      name:  unattended-upgrades
+      name: unattended-upgrades
       state: present
 
 - name: hydra
   apt:
-      name:  medusa
+      name: hydra
       state: present
 
 - name: hydra
   apt:
-      name:  medusa
+      name: medusa
       state: present
 
 # TODO
