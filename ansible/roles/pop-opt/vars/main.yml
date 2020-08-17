@@ -197,3 +197,7 @@ git_repos:
       url: https://github.com/x90skysn3k/brutespray
       branch: master
       shell: "cd /opt/brutespray && pip3 install -r requirements.txt"
+    - name: BruteX
+      url: https://github.com/1N3/BruteX
+      branch: master
+      shell: "ls /opt/BruteX"
