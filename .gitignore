@@ -2,7 +2,7 @@
 .*.swp
 *.retry
 hosts-mine
-tfatk/secrets.tf
+secrets.tf
 .terraform
 terraform.tfstate
 terraform.tfstate.backup
