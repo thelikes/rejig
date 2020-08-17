@@ -1,3 +1,4 @@
-- hosts: "{{ hosts }}"
+- name: Cloning git repos
+  hosts: all
   roles: 
    - pop-opt

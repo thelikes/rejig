@@ -1,4 +1,5 @@
-- hosts: "{{ hosts }}"
+- name: installing dotfiles
+  hosts: all
   roles: 
    - oh-my-zsh
    - dotfiles

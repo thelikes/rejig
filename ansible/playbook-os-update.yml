@@ -1,3 +1,4 @@
-- hosts: "{{ hosts }}"
+- name: Updating OS
+  hosts: all
   roles: 
    - os-update

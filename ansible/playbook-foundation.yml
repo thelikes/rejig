@@ -1,4 +1,5 @@
-- hosts: "{{ hosts }}"
+- name: Setup system foundation
+  hosts: all
   roles: 
    - os-update
    - corepkgs

@@ -1,3 +1,4 @@
-- hosts: "{{ hosts }}"
+- name: Installing go tools
+  hosts: all
   roles: 
    - go-get
