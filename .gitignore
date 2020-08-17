@@ -1,7 +1,6 @@
 .*.un~
 .*.swp
 *.retry
-hosts-mine
 secrets.tf
 .terraform
 terraform.tfstate
