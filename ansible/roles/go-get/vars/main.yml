@@ -87,7 +87,7 @@ go_get:
       url: github.com/glebarez/cero
       shell: "ls /usr/share/go-work/bin/"
     - name: nuclei
-      url: github.com/projectdiscovery/nuclei
+      url: github.com/projectdiscovery/nuclei/v2/cmd/nuclei
       GO111MODULE: "on"
       shell: "ls /usr/share/go-work/bin/"
     - name: httpx
