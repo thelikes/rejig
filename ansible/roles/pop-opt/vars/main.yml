@@ -201,3 +201,7 @@ git_repos:
       url: https://github.com/1N3/BruteX
       branch: master
       shell: "ls /opt/BruteX"
+    - name: Kadimus
+      url: https://github.com/P0cL4bs/Kadimus
+      branch: master
+      shell: "ls /opt/Kadimus

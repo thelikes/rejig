@@ -82,7 +82,7 @@ go_get:
       shell: "ls /usr/share/go-work/bin/"
     - name: gau
       url: github.com/lc/gau
-      shell: "mv /usr/share/go-work/bin/gau /usr/share/go-work/bin/getallurls"
+      shell: "ln -s /usr/share/go-work/bin/gau /usr/share/go-work/bin/getallurls"
     - name: cero
       url: github.com/glebarez/cero
       shell: "ls /usr/share/go-work/bin/"
@@ -102,4 +102,7 @@ go_get:
       shell: "ls /usr/share/go-work/bin/"
     - name: subgen
       url: github.com/pry0cc/subgen
+      shell: "ls /usr/share/go-work/bin/"
+    - name: subjs
+      url: github.com/lc/subjs
       shell: "ls /usr/share/go-work/bin/"

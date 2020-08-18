@@ -108,6 +108,7 @@ ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml
 - libssl-dev
 - tree
 - nmap
+- masscan
 - nfs-common
 - gnome-screenshot
 - libffi-dev
@@ -165,6 +166,7 @@ ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml
 - github.com/003random/getJS
 - github.com/tomnomnom/hacks/anti-burl
 - github.com/pry0cc/subgen
+- github.com/lc/subjs
 
 ### Github repos
 
@@ -211,6 +213,8 @@ ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml
 - github.com/tennc/fuzzdb
 - github.com/vortexau/dnsvalidator
 - github.com/x90skysn3k/brutespray
+- github.com/1N3/BruteX
+- github.com/P0cL4bs/Kadimus
 
 ## To do
 
@@ -231,4 +235,3 @@ ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml
 - [ ] [atlas - sqlmap tamper discovery](https://github.com/m4ll0k/Atlas)
 - [ ] [fprobe](https://github.com/theblackturtle/fprobe)
 - [ ] [zgrab](https://github.com/zmap/zgrab2)
-
