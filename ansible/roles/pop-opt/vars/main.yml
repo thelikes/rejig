@@ -80,7 +80,7 @@ git_repos:
     - name: fuzzmost
       url: https://github.com/thelikes/fuzzmost
       branch: master
-      shell: "ls /opt/fuzzmost"
+      shell: "ln -s /opt/fuzzmost/ /"
     - name: wzrd
       url: https://github.com/thelikes/wzrd
       branch: master
