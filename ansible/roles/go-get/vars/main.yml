@@ -40,7 +40,7 @@ go_get:
       shell: "ls /usr/share/go-work/bin/"
     - name: waybackurls
       url: github.com/tomnomnom/waybackurls
-      shell: "ls /usr/share/go-work/bin/"
+      shell: "ln -s /usr/share/go-work/bin/gau /usr/share/go-work/bin/getallurls"
     - name: unfurl
       url: github.com/tomnomnom/unfurl
       shell: "ls /usr/share/go-work/bin/"
@@ -62,6 +62,15 @@ go_get:
     - name: tok
       url: github.com/tomnomnom/hacks/tok
       shell: "ls /usr/share/go-work/bin/"
+    - name: anti-burl
+      url: github.com/tomnomnom/hacks/anti-burl
+      shell: "ls /usr/share/go-work/bin/"
+    - name: get-title
+      url: github.com/tomnomnom/hacks/get-title
+      shell: "ls /usr/share/go-work/bin/"
+    - name: comb
+      url: github.com/tomnomnom/comb
+      shell: "ls /usr/share/go-work/bin/"
 #    - name: gowitness
 #      url: github.com/sensepost/gowitness
 #      shell: "ls /usr/share/go-work/bin/"
@@ -73,9 +82,6 @@ go_get:
       shell: "ls /usr/share/go-work/bin/"
     - name: wildcheck
       url: github.com/theblackturtle/wildcheck
-      shell: "ls /usr/share/go-work/bin/"
-    - name: get-title
-      url: github.com/tomnomnom/hacks/get-title
       shell: "ls /usr/share/go-work/bin/"
     - name: gospider
       url: github.com/jaeles-project/gospider
@@ -96,9 +102,6 @@ go_get:
       shell: "ls /usr/share/go-work/bin/"
     - name: getJS
       url: github.com/003random/getJS
-      shell: "ls /usr/share/go-work/bin/"
-    - name: anti-burl
-      url: github.com/tomnomnom/hacks/anti-burl
       shell: "ls /usr/share/go-work/bin/"
     - name: subgen
       url: github.com/pry0cc/subgen
