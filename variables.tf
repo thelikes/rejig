@@ -3,7 +3,7 @@ variable "strike_img_name" {
 }
 
 variable "strike_count" {
-    default = 0
+    default = 1
 } 
 
 variable "recon_img_name" {
@@ -19,5 +19,5 @@ variable "nmap_img_name" {
 }
 
 variable "nmap_count" {
-    default = 1
+    default = 0
 }
