@@ -109,3 +109,6 @@ go_get:
     - name: subjs
       url: github.com/lc/subjs
       shell: "ls /usr/share/go-work/bin/"
+    - name: xxeserv
+      url: github.com/staaldraad/xxeserv
+      shell: "ls /usr/share/go-work/bin/"
