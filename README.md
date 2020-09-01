@@ -91,7 +91,7 @@ a "playbook", a host, user, and SSH key. There are many ways to do this, one of
 the most straight forward being:
 
 ```
-ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml
+ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml -e 'ansible_python_interpreter=/usr/bin/python3'
 ```
 
 ## Specifics

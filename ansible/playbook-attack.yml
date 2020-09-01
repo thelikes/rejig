@@ -1,6 +1,5 @@
 - name: attack setup
   hosts: all
   roles: 
-   - golang
    - go-get
    - pop-opt
