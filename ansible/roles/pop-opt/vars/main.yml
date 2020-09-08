@@ -206,6 +206,6 @@ git_repos:
       branch: master
       shell: "ls /opt/Kadimus"
     - name: exploitdb
-      url: git clone https://github.com/offensive-security/exploitdb.git
+      url: https://github.com/offensive-security/exploitdb.git
       branch: master
       shell: "ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit && cp -n /opt/exploitdb/.searchsploit_rc ~/"

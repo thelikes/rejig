@@ -40,7 +40,7 @@ go_get:
       shell: "ls /usr/share/go-work/bin/"
     - name: waybackurls
       url: github.com/tomnomnom/waybackurls
-      shell: "ln -s /usr/share/go-work/bin/gau /usr/share/go-work/bin/getallurls"
+      shell: "ls /usr/share/go-work/bin/"
     - name: unfurl
       url: github.com/tomnomnom/unfurl
       shell: "ls /usr/share/go-work/bin/"
