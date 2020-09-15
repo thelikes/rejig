@@ -185,6 +185,11 @@
       name: medusa
       state: present
 
+- name: default-jdk
+  apt:
+      name: default-jdk
+      state: present
+
 # TODO
 # rm:
 # sqlmap
