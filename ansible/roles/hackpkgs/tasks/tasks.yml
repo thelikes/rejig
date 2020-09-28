@@ -1,0 +1,130 @@
+- name: install libcurl4-openssl-dev 
+  apt:
+      name: libcurl4-openssl-dev
+      state: present
+
+- name: install libssl-dev
+  apt:
+      name: libssl-dev
+      state: present
+
+- name: install tree
+  apt:
+      name: tree
+      state: present
+
+- name: install nmap
+  apt:
+      name: nmap
+      state: present
+
+- name: install masscan
+  apt:
+      name: masscan
+      state: present
+
+- name: install nfs-common
+  apt:
+      name: nfs-common
+      state: present
+
+- name: install gnome-screenshot
+  apt:
+      name: gnome-screenshot
+      state: present
+
+- name: install libffi-dev
+  apt:
+      name: libffi-dev
+      state: present
+
+- name: install python-dev
+  apt:
+      name: python-dev
+      state: present
+
+- name: install build-essential
+  apt:
+      name: build-essential
+      state: present
+
+- name: install whois
+  apt:
+      name: whois
+      state: present
+
+- name: install proxychains
+  apt:
+      name: proxychains
+      state: present
+
+- name: install ack-grep
+  apt:
+      name: ack-grep
+      state: present
+
+- name: install hydra
+  apt:
+      name: hydra
+      state: present
+
+- name: install jq
+  apt:
+      name: jq
+      state: present
+
+- name: install chromium-browser
+  apt:
+      name: chromium-browser
+      state: present
+  ignore_errors: yes
+
+- name: install dos2unix
+  apt:
+      name: dos2unix
+      state: present
+
+- name: install html2text
+  apt:
+      name: html2text
+      state: present
+
+- name: install unzip
+  apt:
+      name: unzip
+      state: present
+
+- name: install john the ripper
+  apt:
+      name: john
+      state: present
+
+- name: install postgresql
+  apt:
+      name: postgresql
+      state: present
+
+- name: install mysql-client
+  apt:
+      name: mysql-client
+      state: present
+
+- name: install postgresql-contrib
+  apt:
+      name: postgresql-contrib
+      state: present
+
+- name: hydra
+  apt:
+      name: hydra
+      state: present
+
+- name: medusa
+  apt:
+      name: medusa
+      state: present
+
+- name: default-jdk
+  apt:
+      name: default-jdk
+      state: present
