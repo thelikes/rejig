@@ -1,5 +1,6 @@
 - name: attack setup
   hosts: all
   roles: 
+   - hackpkgs
    - go-get
    - pop-opt
