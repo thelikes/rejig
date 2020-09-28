@@ -104,7 +104,7 @@ git_repos:
     - name: LinkFinder
       url: https://github.com/GerbenJavado/LinkFinder
       branch: master
-      shell: "cd /opt/LinkFinder && pip install -r requirements.txt && python setup.py install"
+      shell: "cd /opt/LinkFinder && pip3 install -r requirements.txt && python setup.py install"
     - name: cc.py
       url: https://github.com/si9int/cc.py
       branch: master
