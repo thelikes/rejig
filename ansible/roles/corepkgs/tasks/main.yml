@@ -140,15 +140,16 @@
       name: postgresql
       state: present
 
+- name: install mysql-client
+  apt:
+      name: mysql-client
+      state: present
+
 - name: install postgresql-contrib
   apt:
       name: postgresql-contrib
       state: present
 
-- name: install mysql-server
-  apt:
-      name: mysql-server
-      state: present
 
 - name: install vim
   apt:
@@ -188,6 +189,11 @@
 - name: default-jdk
   apt:
       name: default-jdk
+      state: present
+
+- name: htop
+  apt:
+      name: htop
       state: present
 
 # TODO
