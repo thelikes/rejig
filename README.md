@@ -104,6 +104,16 @@ ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml
 - python-pip
 - python3
 - python3-pip
+- socat
+- vim
+- rsync
+- curl
+- git
+- unattended-upgrades
+- htop
+
+### Hack packages
+
 - libcurl4-openssl-dev
 - libssl-dev
 - tree
@@ -120,21 +130,17 @@ ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml
 - hydra
 - jq
 - chromium-browser
-- socat
 - dos2unix
 - html2text
 - unzip
 - john
 - postgresql
+- mysql-client
 - postgresql-contrib
-- mysql-server
-- vim
-- rsync
-- curl
-- git
-- unattended-upgrades
 - hydra
 - medusa
+- default-jdk
+- metasploit
 
 ### Go tools
 
@@ -154,17 +160,18 @@ ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml
 - github.com/tomnomnom/gron
 - github.com/tomnomnom/hacks/html-tool
 - github.com/tomnomnom/hacks/tok
+- github.com/tomnomnom/hacks/anti-burl
+- github.com/tomnomnom/hacks/get-title
+- github.com/tomnomnom/comb
 - github.com/rverton/webanalyze/...
 - github.com/hakluke/hakrawler
 - github.com/theblackturtle/wildcheck
-- github.com/tomnomnom/hacks/get-title
 - github.com/jaeles-project/gospider
 - github.com/lc/gau
 - github.com/glebarez/cero
-- github.com/projectdiscovery/nuclei
+- github.com/projectdiscovery/nuclei/v2/cmd/nuclei
 - github.com/projectdiscovery/httpx/cmd/httpx
 - github.com/003random/getJS
-- github.com/tomnomnom/hacks/anti-burl
 - github.com/pry0cc/subgen
 - github.com/lc/subjs
 
@@ -215,23 +222,5 @@ ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml
 - github.com/x90skysn3k/brutespray
 - github.com/1N3/BruteX
 - github.com/P0cL4bs/Kadimus
-
-## To do
-
-### evaluate / implement 
-
-- [ ] bypass-firewalls-by-DNS-history
-- [ ] cloudflare_enum
-- [ ] spoofcheck
-- [ ] msf
-- [ ] wpscan
-- [ ] [dnstwist](https://github.com/elceef/dnstwist)
-- [ ] [wordlistgen](https://github.com/ameenmaali/wordlistgen)
-- [ ] [pathbrute](https://github.com/milo2012/pathbrute)
-- [ ] [shuffledns](https://github.com/projectdiscovery/shuffledns)
-- [ ] [fuzzdb](https://github.com/fuzzdb-project/fuzzdb)
-- [ ] [crithit](https://github.com/codingo/crithit)
-- [ ] [minidump](https://github.com/Mr-Un1k0d3r/MiniDump)
-- [ ] [atlas - sqlmap tamper discovery](https://github.com/m4ll0k/Atlas)
-- [ ] [fprobe](https://github.com/theblackturtle/fprobe)
-- [ ] [zgrab](https://github.com/zmap/zgrab2)
+- github.com/offensive-security/exploitdb.git
+- github.com/irsdl/IIS-ShortName-Scanner

@@ -7,6 +7,13 @@ echo
 grep '      name: ' roles/corepkgs/tasks/main.yml | cut -d\: -f2- | sed 's/^/-/g'
 
 echo
+echo "### Hack packages"
+echo
+
+grep '      name: ' roles/hackpkgs/tasks/main.yml | cut -d\: -f2- | sed 's/^/-/g'
+echo "- metasploit"
+
+echo
 echo "### Go tools"
 echo
 
