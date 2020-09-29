@@ -1,3 +1,8 @@
+- name: Get Facts
+  debug:
+      msg: 
+        -  "ansible_lsb.major_release: {{ansible_lsb.major_release}}"
+
 - name: install zsh
   apt:
       name: zsh
@@ -13,10 +18,15 @@
       name: python
       state: present
 
-- name: install python-pip
+- name: Install python-pip (Bionic Beaver)
   apt:
       name: python-pip
       state: present
+  when: "ansible_lsb.major_release == '18'"
+
+- name: Install python-pip (Focal Fossa)
+  shell: "mkdir /opt/install-pip2 && curl https://bootstrap.pypa.io/get-pip.py --output /opt/install-pip2/get-pip.py && python2 /opt/install-pip2/get-pip.py"
+  when: "ansible_lsb.major_release == '20'"
 
 - name: install python3
   apt:
