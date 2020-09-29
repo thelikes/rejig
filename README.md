@@ -34,13 +34,15 @@ $ terraform destroy # -auto-approve (to skip the prompt)
 ### Adjustments
 
 - The `variables.tf` file contains the parameters used to setup the deployed
-terraform state. System names and quantities of systems are set here. 
-- Create a file `secrets.tf` to store your digitalocean (or other cloud
-  service) api key. In terraform speak, this is called the "provider" and can
+  terraform state. System names and quantities of systems are set here. 
+- Create a file `secrets.tf` to store your digitalocean, vultr, or other cloud
+  service api key. In terraform speak, this is called the "provider" and can
   be used on numerous cloud services, or even locally with qemu, virtualbox,
-  etc. As far as ditialocean goes, you'll need to include your SSH key ID as
-  well. An ansible vault file can be referenced as well, and is used to
-  decrypt secrets.
+  etc. You'll need to include your SSH key ID as well. An ansible vault file
+  can be referenced as well, and is used to decrypt secrets.
+
+Digital Ocean example follows. To use vultr, you'll need to install the vultr
+[provider](https://github.com/vultr/terraform-provider-vultr) first. 
 
 ```
 provider "digitalocean" {
@@ -74,7 +76,7 @@ host_key_checking = False
 ## How this Works
 
 Terraform is used to spawn and destroy systems. Terraform can be used for many
-"providers", this repo is currently setup to use digitalocean. Terraform will
+"providers", this repo currently supports digitalocean and vultr. Terraform will
 spawn systems upon execution of `apply` and will then use the `remote-exec` and
 `local-exec` to install python and execute ansible. Ansible is used to install
 crap. The list of crap installed can be found in various files under
