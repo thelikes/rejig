@@ -23,7 +23,7 @@ resource "digitalocean_droplet" "strike" {
     }
 
     provisioner "local-exec" {
-        command = "ansible-playbook -u root -i '${self.ipv4_address}', --private-key ${var.myprivkey} ansible/playbook-bun2atk.yml --vault-password-file ${var.myvualtfile}"
+        command = "ansible-playbook -u root -i '${self.ipv4_address}', --private-key ${var.myprivkey} ../ansible/playbook-bun2atk.yml --vault-password-file ${var.myvualtfile}"
     }
 }
 
@@ -52,7 +52,7 @@ resource "digitalocean_droplet" "recon" {
     }
 
     provisioner "local-exec" {
-        command = "ansible-playbook -u root -i '${self.ipv4_address}', --private-key ${var.myprivkey} ansible/playbook-bun2atk.yml --vault-password-file ${var.myvualtfile}"
+        command = "ansible-playbook -u root -i '${self.ipv4_address}', --private-key ${var.myprivkey} ../ansible/playbook-bun2atk.yml --vault-password-file ${var.myvualtfile}"
     }
 }
 
@@ -81,7 +81,7 @@ resource "digitalocean_droplet" "nmap" {
     }
 
     provisioner "local-exec" {
-        command = "ansible-playbook -u root -i '${self.ipv4_address}', --private-key ${var.myprivkey} ansible/playbook-foundation.yml --vault-password-file ${var.myvualtfile}"
+        command = "ansible-playbook -u root -i '${self.ipv4_address}', --private-key ${var.myprivkey} ../ansible/playbook-foundation.yml --vault-password-file ${var.myvualtfile}"
     }
 }
 
