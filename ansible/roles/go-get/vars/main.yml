@@ -3,7 +3,7 @@ GOPATH: "/usr/share/go-work/"
 PATH: "PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:/usr/share/go-work/bin"
 
 aquatone_download_location: "https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip"
-aquatone_install_location: "/opt/install-aquatone"
+aquatone_install_location: "/opt/install/aquatone"
 aquatone_archive: "aquatone_linux_amd64_1.7.0.zip"
 
 go_get_special:
