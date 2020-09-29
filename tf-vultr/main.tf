@@ -21,7 +21,7 @@ resource "vultr_server" "strike" {
     }
 
     provisioner "local-exec" {
-        command = "ansible-playbook -u root -i '${self.main_ip}', --private-key ${var.vultr_key_path} ../ansible/playbook-foundation.yml"
+        command = "ansible-playbook -u root -i '${self.main_ip}', --private-key ${var.vultr_key_path} ../ansible/playbook-bun2atk.yml"
     }
 }
 
