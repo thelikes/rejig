@@ -1,0 +1,51 @@
+#curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+#  chmod 755 msfinstall && \
+#  ./msfinstall
+
+# create new user
+# su to the user
+# msfdb stop
+# msfdb start
+# exit
+# cp /home/newuser/.msf4/database.yml ~/.msf4/database.yml
+# msfconsole
+# db_status
+
+- name: Create msf install directory
+  file:
+    path: /opt/install/msf
+    state: directory
+
+- name: Create msf install file
+  uri:
+    url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb
+    dest: /opt/install/msf/msfinstall
+
+- name: Set msf install file executable
+  file: 
+    path: /opt/install/msf/msfinstall
+    owner: root
+    group: root
+    mode: '755'
+
+- name: Install msf
+  command: bash /opt/install/msf/msfinstall
+
+- name: Create msf user
+  command: useradd -m msf
+
+- name: Configure msf
+  command: "su - msf -c 'msfdb init --use-defaults --component database'"
+
+- name: Create local .msf4
+  file:
+    path: /root/.msf4
+    state: directory
+
+- name: Copy msf config
+  copy:
+    remote_src: True
+    src: /home/msf/.msf4/database.yml
+    dest: /root/.msf4/database.yml
+    owner: root
+    group: root
