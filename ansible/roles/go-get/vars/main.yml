@@ -22,12 +22,13 @@ go_get:
 #    - name: gwdomains module
 #      url: github.com/thelikes/gwdomains
 #      GO111MODULE: "on"
-    - name: fuzznav
-      url: github.com/thelikes/fuzznav
-      GO111MODULE: "on"
-      shell: "ls /usr/share/go-work/bin/"
+#    - name: fuzznav
+#      url: github.com/thelikes/fuzznav
+#      GO111MODULE: "on"
+#      shell: "ls /usr/share/go-work/bin/"
     - name: subfinder
       url: github.com/projectdiscovery/subfinder/cmd/subfinder
+      GO111MODULE: "on"
       shell: "ls /usr/share/go-work/bin/"
     - name: httprobe
       url: github.com/tomnomnom/httprobe
