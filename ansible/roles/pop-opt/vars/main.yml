@@ -213,3 +213,7 @@ git_repos:
       url: https://github.com/irsdl/IIS-ShortName-Scanner
       branch: master
       shell: "ls /opt/IIS-ShortName-Scanner"
+    - name: Python-dsstore
+      url: https://github.com/gehaxelt/Python-dsstore
+      branch: master
+      shell: "ls /opt/Python-dsstore"
