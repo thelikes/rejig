@@ -13,6 +13,11 @@
       name: tmux
       state: present
 
+- name: install curl
+  apt:
+      name: curl
+      state: present
+
 - name: install python
   apt:
       name: python
@@ -51,11 +56,6 @@
 - name: install rsync
   apt:
       name: rsync
-      state: present
-
-- name: install curl
-  apt:
-      name: curl
       state: present
 
 - name: install git

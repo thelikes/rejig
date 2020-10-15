@@ -217,3 +217,7 @@ git_repos:
       url: https://github.com/gehaxelt/Python-dsstore
       branch: master
       shell: "ls /opt/Python-dsstore"
+    - name: dvcs-ripper
+      url: https://github.com/kost/dvcs-ripper
+      branch: master
+      shell: "ls /opt/dvcs-ripper"
