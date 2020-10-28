@@ -1,0 +1,15 @@
+git_repos:
+    # fuzzers
+    - name: dirsearch
+      url: https://github.com/nikallass/dirsearch
+      branch: master
+    - name: fuzzmost
+      url: https://github.com/thelikes/fuzzmost
+      branch: master
+      shell: "ln -s /opt/fuzzers/fuzzmost/ /"
+    - name: IIS-ShortName-Scanner
+      url: https://github.com/irsdl/IIS-ShortName-Scanner
+      branch: master
+    - name: pathbrute
+      url: https://github.com/milo2012/pathbrute
+      branch: master

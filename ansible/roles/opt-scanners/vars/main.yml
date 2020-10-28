@@ -1,0 +1,28 @@
+git_repos:
+    # scanners
+    - name: sqlmap
+      url: https://github.com/sqlmapproject/sqlmap
+      branch: master
+      shell: "apt purge sqlmap -y; ln -s /opt/sqlmap/sqlmap.py /usr/bin/sqlmap"
+    - name: tplmap
+      url: https://github.com/epinna/tplmap
+      branch: master
+    - name: commix
+      url: https://github.com/commixproject/commix
+      branch: master
+      shell: "apt purge commix -y;"
+    - name: NoSQLMap
+      url: https://github.com/codingo/NoSQLMap
+      branch: master
+    - name: LFISuite
+      url: https://github.com/D35m0nd142/LFISuite
+      branch: master
+    - name: Kadimus
+      url: https://github.com/P0cL4bs/Kadimus
+      branch: master
+    - name: Hwacha
+      url: https://github.com/n00py/Hwacha
+      branch: master
+    - name: nuclei-templates
+      url: https://github.com/projectdiscovery/nuclei-templates
+      branch: master

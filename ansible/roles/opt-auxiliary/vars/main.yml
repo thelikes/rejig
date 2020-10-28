@@ -1,0 +1,30 @@
+git_repos:
+    # aux
+    - name: parameth
+      url: https://github.com/maK-/parameth
+      branch: master
+    - name: wzrd
+      url: https://github.com/thelikes/wzrd
+      branch: master
+    - name: ShoScan
+      url: https://github.com/pathetiq/ShoScan
+      branch: master
+    - name: fav-up
+      url: https://github.com/pielco11/fav-up
+      branch: master
+    - name: massdns
+      url: https://github.com/blechschmidt/massdns
+      branch: master
+      shell: "cd /opt/auxiliary/massdns && make"
+    - name: LinkFinder
+      url: https://github.com/GerbenJavado/LinkFinder
+      branch: master
+    - name: cc.py
+      url: https://github.com/si9int/cc.py
+      branch: master
+    - name: Arjun
+      url: https://github.com/s0md3v/Arjun
+      branch: master
+    - name: github-search
+      url: https://github.com/gwen001/github-search
+      branch: master

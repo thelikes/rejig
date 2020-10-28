@@ -1,7 +1,7 @@
-- name: clone
+- name: fuzzers clone
   git: 
       repo: "{{ item.url }}"
-      dest: "/opt/{{ item.name }}"
+      dest: "/opt/privesc/{{ item.name }}"
       #clone: no
       update: yes
       version: "{{ item.branch }}"

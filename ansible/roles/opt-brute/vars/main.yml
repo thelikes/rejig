@@ -1,0 +1,11 @@
+git_repos:
+    # brute
+    - name: brutespray
+      url: https://github.com/x90skysn3k/brutespray
+      branch: master
+    - name: BruteX
+      url: https://github.com/1N3/BruteX
+      branch: master
+    - name: Spray
+      url: https://github.com/Greenwolf/Spray
+      branch: master

@@ -1,0 +1,15 @@
+git_repos:
+    # priv esc
+    - name: LinEnum
+      url: https://github.com/rebootuser/LinEnum
+      branch: master
+      shell: "ls /opt"
+    - name: linux-local-enumeration-script
+      url: https://github.com/Arr0way/linux-local-enumeration-script
+      branch: master
+      shell: "ls /opt"
+    - name: Linux_Exploit_Suggester
+      url: https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
+      branch: master
+      shell: "ls /opt"
+    # linpeas, winpeas, lse

@@ -1,0 +1,21 @@
+git_repos:
+    # wordlists
+    - name: SecLists
+      url: https://github.com/danielmiessler/SecLists
+      branch: master
+      shell: "ln -s /opt/wordlists/SecLists /"
+    - name: api_wordlist
+      url: https://github.com/chrislockard/api_wordlist
+      branch: master
+    - name: fuzz.txt
+      url: https://github.com/Bo0oM/fuzz.txt
+      branch: master
+    - name: fuzzdb
+      url: https://github.com/fuzzdb-project/fuzzdb
+      branch: master
+    - name: tennc-fuzzdb
+      url: https://github.com/tennc/fuzzdb
+      branch: master
+    - name: Pwdb-Public
+      url: https://github.com/FlameOfIgnis/Pwdb-Public
+      branch: master
