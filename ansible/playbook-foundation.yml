@@ -2,7 +2,9 @@
   hosts: all
   roles: 
    - os-update
-   - corepkgs
+   - pkgs-base
+   - pkgs-python
+   - wireguard
    - oh-my-zsh
    - dotfiles
    - golang
