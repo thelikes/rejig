@@ -3,5 +3,4 @@
   roles: 
    - hackpkgs
    - go-get
-   - pop-opt
    - msf-install

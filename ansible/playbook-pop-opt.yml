@@ -6,7 +6,6 @@
    - opt-scanners
    - opt-auxiliary
    - opt-satellite
-   - opt-template
    - opt-exploit
    - opt-privesc
    - opt-brute

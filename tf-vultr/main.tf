@@ -41,7 +41,7 @@ resource "vultr_server" "proxy" {
     enable_ipv6 = true
     auto_backup = false
     ssh_key_ids = var.vultr_ssh_key_id
-    count = 1
+    count = 0
 
     provisioner "remote-exec" {
   

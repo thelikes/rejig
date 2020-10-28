@@ -1,2 +1,0 @@
-- import_playbook: playbook-foundation.yml
-- import_playbook: playbook-attack.yml
