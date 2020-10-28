@@ -1,0 +1,5 @@
+
+- name: wireguard
+  apt:
+      name: wireguard
+      state: present

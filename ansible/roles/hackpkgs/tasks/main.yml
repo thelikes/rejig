@@ -128,3 +128,10 @@
   apt:
       name: default-jdk
       state: present
+
+- name: install socat
+  apt:
+      name: socat
+      state: present
+
+
