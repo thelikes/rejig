@@ -3,9 +3,12 @@ git_repos:
     - name: brutespray
       url: https://github.com/x90skysn3k/brutespray
       branch: master
+      shell: "ls /opt/brute"
     - name: BruteX
       url: https://github.com/1N3/BruteX
       branch: master
+      shell: "ls /opt/brute"
     - name: Spray
       url: https://github.com/Greenwolf/Spray
       branch: master
+      shell: "ls /opt/brute"

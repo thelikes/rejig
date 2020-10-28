@@ -3,20 +3,24 @@ git_repos:
     - name: exploitdb
       url: https://github.com/offensive-security/exploitdb.git
       branch: master
-      shell: "ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit && cp -n /opt/exploitdb/.searchsploit_rc ~/"
+      shell: "ln -sf /opt/utils/exploitdb/searchsploit /usr/local/bin/searchsploit && cp -n /opt/utils/exploitdb/.searchsploit_rc ~/"
     - name: Python-dsstore
       url: https://github.com/gehaxelt/Python-dsstore
       branch: master
+      shell: "ls /opt/utils"
     - name: dvcs-ripper
       url: https://github.com/kost/dvcs-ripper
       branch: master
+      shell: "ls /opt/utils"
     - name: git-dumper
       url: https://github.com/arthaud/git-dumper
       branch: master
+      shell: "ls /opt/utils"
     - name: requestify
       url: https://github.com/ggabarrin/requestify
       branch: master
+      shell: "ls /opt/utils"
     - name: dnsvalidator
       url: https://github.com/vortexau/dnsvalidator
       branch: master
-      shell: "cd /opt/dnsvalidator && python3 setup.py install"
+      shell: "cd /opt/utils/dnsvalidator && python3 setup.py install"

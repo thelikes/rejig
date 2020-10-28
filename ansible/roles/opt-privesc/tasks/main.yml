@@ -1,4 +1,4 @@
-- name: fuzzers clone
+- name: privesc clone
   git: 
       repo: "{{ item.url }}"
       dest: "/opt/privesc/{{ item.name }}"

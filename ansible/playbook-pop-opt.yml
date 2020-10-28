@@ -1,4 +1,13 @@
 - name: Cloning git repos
   hosts: all
   roles: 
-   - pop-opt
+   - opt-wordlists
+   - opt-fuzzers
+   - opt-scanners
+   - opt-auxiliary
+   - opt-satellite
+   - opt-template
+   - opt-exploit
+   - opt-privesc
+   - opt-brute
+   - opt-utils

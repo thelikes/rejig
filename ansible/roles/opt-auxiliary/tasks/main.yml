@@ -1,4 +1,4 @@
-- name: fuzzers clone
+- name: auxiliary clone
   git: 
       repo: "{{ item.url }}"
       dest: "/opt/auxiliary/{{ item.name }}"

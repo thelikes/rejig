@@ -13,3 +13,4 @@ git_repos:
     - name: satellite
       url: "{{ satellite_url }}"
       branch: master
+      shell: "ls /opt/satellite"

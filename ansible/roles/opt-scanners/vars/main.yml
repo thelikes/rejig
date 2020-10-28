@@ -7,6 +7,7 @@ git_repos:
     - name: tplmap
       url: https://github.com/epinna/tplmap
       branch: master
+      shell: "ls /opt/scanners"
     - name: commix
       url: https://github.com/commixproject/commix
       branch: master
@@ -14,15 +15,20 @@ git_repos:
     - name: NoSQLMap
       url: https://github.com/codingo/NoSQLMap
       branch: master
+      shell: "ls /opt/scanners"
     - name: LFISuite
       url: https://github.com/D35m0nd142/LFISuite
       branch: master
+      shell: "ls /opt/scanners"
     - name: Kadimus
       url: https://github.com/P0cL4bs/Kadimus
       branch: master
+      shell: "ls /opt/scanners"
     - name: Hwacha
       url: https://github.com/n00py/Hwacha
       branch: master
+      shell: "ls /opt/scanners"
     - name: nuclei-templates
       url: https://github.com/projectdiscovery/nuclei-templates
       branch: master
+      shell: "ls /opt/scanners"

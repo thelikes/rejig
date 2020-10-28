@@ -7,15 +7,24 @@ git_repos:
     - name: api_wordlist
       url: https://github.com/chrislockard/api_wordlist
       branch: master
+      shell: "ls /opt/wordlists"
     - name: fuzz.txt
       url: https://github.com/Bo0oM/fuzz.txt
       branch: master
+      shell: "ls /opt/wordlists"
     - name: fuzzdb
       url: https://github.com/fuzzdb-project/fuzzdb
       branch: master
+      shell: "ls /opt/wordlists"
     - name: tennc-fuzzdb
       url: https://github.com/tennc/fuzzdb
       branch: master
+      shell: "ls /opt/wordlists"
     - name: Pwdb-Public
       url: https://github.com/FlameOfIgnis/Pwdb-Public
       branch: master
+      shell: "ls /opt/wordlists"
+    - name: fuzzmost
+      url: https://github.com/thelikes/fuzzmost
+      branch: master
+      shell: "ln -s /opt/wordlists/fuzzmost/ /"

@@ -3,15 +3,19 @@ git_repos:
     - name: parameth
       url: https://github.com/maK-/parameth
       branch: master
+      shell: "ls /opt/auxiliary"
     - name: wzrd
       url: https://github.com/thelikes/wzrd
       branch: master
+      shell: "ls /opt/auxiliary"
     - name: ShoScan
       url: https://github.com/pathetiq/ShoScan
       branch: master
+      shell: "ls /opt/auxiliary"
     - name: fav-up
       url: https://github.com/pielco11/fav-up
       branch: master
+      shell: "ls /opt/auxiliary"
     - name: massdns
       url: https://github.com/blechschmidt/massdns
       branch: master
@@ -19,12 +23,16 @@ git_repos:
     - name: LinkFinder
       url: https://github.com/GerbenJavado/LinkFinder
       branch: master
+      shell: "ls /opt/auxiliary"
     - name: cc.py
       url: https://github.com/si9int/cc.py
       branch: master
+      shell: "ls /opt/auxiliary"
     - name: Arjun
       url: https://github.com/s0md3v/Arjun
       branch: master
+      shell: "ls /opt/auxiliary"
     - name: github-search
       url: https://github.com/gwen001/github-search
       branch: master
+      shell: "ls /opt/auxiliary"
