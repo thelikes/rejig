@@ -14,52 +14,11 @@ satellite_url: !vault |
 # Note #2: if the repo is a tool included in kali, make sure to remove the kali
 # version first
 git_repos:
+    # wordlists
     - name: SecLists
       url: https://github.com/danielmiessler/SecLists
       branch: master
       shell: "ln -s /opt/SecLists /"
-    - name: wfuzz
-      url: https://github.com/xmendez/wfuzz/
-      branch: dev
-      # purge in case the package is already there - we want the most up to date
-      #shell: "apt purge wfuzz -y; cd /opt/wfuzz && pip install -r requirements.txt && python setup.py install"
-      shell: "apt purge wfuzz -y; ls /opt/wfuzz"
-    - name: sqlmap
-      url: https://github.com/sqlmapproject/sqlmap
-      branch: master
-      shell: "apt purge sqlmap -y; ln -s /opt/sqlmap/sqlmap.py /usr/bin/sqlmap"
-    - name: Sublist3r
-      url: https://github.com/aboul3la/Sublist3r
-      branch: master
-      shell: "cd /opt/Sublist3r && pip install -r requirements.txt && python setup.py install"
-    - name: satellite
-      url: "{{ satellite_url }}"
-      branch: master
-      shell: "ls /opt/satellite"
-    - name: tplmap
-      url: https://github.com/epinna/tplmap
-      branch: master
-      shell: "cd /opt/tplmap && pip install -r requirements.txt"
-    - name: CrackMapExec
-      url: https://github.com/byt3bl33d3r/CrackMapExec
-      recursive: yes
-      branch: master
-      shell: "ls"
-      # TODO fix this bullshit
-      #shell: "echo \"pip install -U pipenv\npipenv install\npipenv shell\npython setup.py install\" > /opt/CrackMapExec/prohib_install.txt"
-    - name: impacket
-      url: https://github.com/SecureAuthCorp/impacket
-      recursive: yes
-      branch: master
-      shell: "ls"
-    - name: commix
-      url: https://github.com/commixproject/commix
-      branch: master
-      shell: "ls /opt/commix"
-    - name: parameth
-      url: https://github.com/maK-/parameth
-      branch: master
-      shell: "cd /opt/parameth && pip install -r requirements.txt"
     - name: api_wordlist
       url: https://github.com/chrislockard/api_wordlist
       branch: master
@@ -68,27 +27,86 @@ git_repos:
       url: https://github.com/Bo0oM/fuzz.txt
       branch: master
       shell: "ls /opt/fuzz.txt/"
+    - name: fuzzdb
+      url: https://github.com/fuzzdb-project/fuzzdb
+      branch: master
+      shell: "ls /opt"
+    - name: tennc-fuzzdb
+      url: https://github.com/tennc/fuzzdb
+      branch: master
+      shell: "ls /opt"
+    - name: Pwdb-Public
+      url: https://github.com/FlameOfIgnis/Pwdb-Public
+      branch: master
+      shell: "ls /opt"
+
+    # fuzzers
+    - name: wfuzz
+      url: https://github.com/xmendez/wfuzz/
+      branch: dev
+      # purge in case the package is already there - we want the most up to date
+      #shell: "apt purge wfuzz -y; cd /opt/wfuzz && pip install -r requirements.txt && python setup.py install"
+      shell: "apt purge wfuzz -y; ls /opt/wfuzz"
     - name: dirsearch
       url: https://github.com/nikallass/dirsearch
       branch: master
       shell: "ls /opt/dirsearch/"
-    - name: node-dirbuster
-      url: https://github.com/daviddias/node-dirbuster
-      branch: master
-      shell: "mkdir /usr/share/dirbuster && ln -s /opt/node-dirbuster/lists /usr/share/dirbuster/wordlists"
-      warn: False
     - name: fuzzmost
       url: https://github.com/thelikes/fuzzmost
       branch: master
       shell: "ln -s /opt/fuzzmost/ /"
+    - name: IIS-ShortName-Scanner
+      url: https://github.com/irsdl/IIS-ShortName-Scanner
+      branch: master
+      shell: "ls /opt/IIS-ShortName-Scanner"
+    - name: pathbrute
+      url: https://github.com/milo2012/pathbrute
+      branch: master
+      shell: "ls /opt/pathbrute"
+
+    # scanners
+    - name: sqlmap
+      url: https://github.com/sqlmapproject/sqlmap
+      branch: master
+      shell: "apt purge sqlmap -y; ln -s /opt/sqlmap/sqlmap.py /usr/bin/sqlmap"
+    - name: tplmap
+      url: https://github.com/epinna/tplmap
+      branch: master
+      shell: "cd /opt/tplmap && pip install -r requirements.txt"
+    - name: commix
+      url: https://github.com/commixproject/commix
+      branch: master
+      shell: "ls /opt/commix"
+    - name: NoSQLMap
+      url: https://github.com/codingo/NoSQLMap
+      branch: master
+      shell: "ls /opt"
+    - name: LFISuite
+      url: https://github.com/D35m0nd142/LFISuite
+      branch: master
+      shell: "ls /opt"
+    - name: Kadimus
+      url: https://github.com/P0cL4bs/Kadimus
+      branch: master
+      shell: "ls /opt/Kadimus"
+    - name: Hwacha
+      url: https://github.com/n00py/Hwacha
+      branch: master
+      shell: "ls /opt"
+    - name: nuclei-templates
+      url: https://github.com/projectdiscovery/nuclei-templates
+      branch: master
+      shell: "ls /opt"
+
+    # aux
+    - name: parameth
+      url: https://github.com/maK-/parameth
+      branch: master
+      shell: "cd /opt/parameth && pip install -r requirements.txt"
     - name: wzrd
       url: https://github.com/thelikes/wzrd
       branch: master
       shell: "ln -s /opt/wzrd/web/wzrd-gobuster.sh /usr/bin/"
-    - name: dnsgen
-      url: https://github.com/projectante/dnsgen
-      branch: master
-      shell: "cd /opt/dnsgen && pip3 install -r requirements.txt && python3 setup.py install"
     - name: ShoScan
       url: https://github.com/pathetiq/ShoScan
       branch: master
@@ -113,10 +131,47 @@ git_repos:
       url: https://github.com/s0md3v/Arjun
       branch: master
       shell: "ls /opt/Arjun"
-    - name: pathbrute
-      url: https://github.com/milo2012/pathbrute
+    - name: github-search
+      url: https://github.com/gwen001/github-search
       branch: master
-      shell: "ls /opt/pathbrute"
+      shell: "cd /opt/github-search && pip3 install -r requirements3.txt"
+
+    # recon
+    - name: Sublist3r
+      url: https://github.com/aboul3la/Sublist3r
+      branch: master
+      shell: "cd /opt/Sublist3r && pip install -r requirements.txt && python setup.py install"
+    - name: satellite
+      url: "{{ satellite_url }}"
+      branch: master
+      shell: "ls /opt/satellite"
+      # > install with pip
+    - name: dnsgen
+      url: https://github.com/projectante/dnsgen
+      branch: master
+      shell: "cd /opt/dnsgen && pip3 install -r requirements.txt && python3 setup.py install"
+
+    # windows
+    # > insall with pip
+    - name: CrackMapExec
+      url: https://github.com/byt3bl33d3r/CrackMapExec
+      recursive: yes
+      branch: master
+      shell: "ls"
+      # TODO fix this bullshit
+      #shell: "echo \"pip install -U pipenv\npipenv install\npipenv shell\npython setup.py install\" > /opt/CrackMapExec/prohib_install.txt"
+    - name: ldapdomaindump
+      url: https://github.com/dirkjanm/ldapdomaindump
+      branch: master
+      shell: "ls /opt"
+
+    - name: impacket
+      url: https://github.com/SecureAuthCorp/impacket
+      recursive: yes
+      branch: master
+      shell: "ls"
+
+    # exploit
     - name: xxeserv
       url: https://github.com/staaldraad/xxeserv
       branch: master
@@ -133,18 +188,8 @@ git_repos:
       url: https://github.com/Sab0tag3d/SIET
       branch: master
       shell: "ls /opt"
-    - name: NoSQLMap
-      url: https://github.com/codingo/NoSQLMap
-      branch: master
-      shell: "ls /opt"
-    - name: LFISuite
-      url: https://github.com/D35m0nd142/LFISuite
-      branch: master
-      shell: "ls /opt"
-    - name: requestify
-      url: https://github.com/ggabarrin/requestify
-      branch: master
-      shell: "ls /opt"
+
+    # priv esc
     - name: LinEnum
       url: https://github.com/rebootuser/LinEnum
       branch: master
@@ -157,42 +202,8 @@ git_repos:
       url: https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
       branch: master
       shell: "ls /opt"
-    - name: Hwacha
-      url: https://github.com/n00py/Hwacha
-      branch: master
-      shell: "ls /opt"
-    - name: nuclei-templates
-      url: https://github.com/projectdiscovery/nuclei-templates
-      branch: master
-      shell: "ls /opt"
-    - name: github-search
-      url: https://github.com/gwen001/github-search
-      branch: master
-      shell: "cd /opt/github-search && pip3 install -r requirements3.txt"
-    - name: Spray
-      url: https://github.com/Greenwolf/Spray
-      branch: master
-      shell: "ls /opt"
-    - name: Pwdb-Public
-      url: https://github.com/FlameOfIgnis/Pwdb-Public
-      branch: master
-      shell: "ls /opt"
-    - name: ldapdomaindump
-      url: https://github.com/dirkjanm/ldapdomaindump
-      branch: master
-      shell: "ls /opt"
-    - name: fuzzdb
-      url: https://github.com/fuzzdb-project/fuzzdb
-      branch: master
-      shell: "ls /opt"
-    - name: tennc-fuzzdb
-      url: https://github.com/tennc/fuzzdb
-      branch: master
-      shell: "ls /opt"
-    - name: dnsvalidator
-      url: https://github.com/vortexau/dnsvalidator
-      branch: master
-      shell: "cd /opt/dnsvalidator && python3 setup.py install"
+
+    # brute
     - name: brutespray
       url: https://github.com/x90skysn3k/brutespray
       branch: master
@@ -201,18 +212,16 @@ git_repos:
       url: https://github.com/1N3/BruteX
       branch: master
       shell: "ls /opt/BruteX"
-    - name: Kadimus
-      url: https://github.com/P0cL4bs/Kadimus
+    - name: Spray
+      url: https://github.com/Greenwolf/Spray
       branch: master
-      shell: "ls /opt/Kadimus"
+      shell: "ls /opt"
+
+      # utils
     - name: exploitdb
       url: https://github.com/offensive-security/exploitdb.git
       branch: master
       shell: "ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit && cp -n /opt/exploitdb/.searchsploit_rc ~/"
-    - name: IIS-ShortName-Scanner
-      url: https://github.com/irsdl/IIS-ShortName-Scanner
-      branch: master
-      shell: "ls /opt/IIS-ShortName-Scanner"
     - name: Python-dsstore
       url: https://github.com/gehaxelt/Python-dsstore
       branch: master
@@ -221,3 +230,11 @@ git_repos:
       url: https://github.com/kost/dvcs-ripper
       branch: master
       shell: "ls /opt/dvcs-ripper"
+    - name: requestify
+      url: https://github.com/ggabarrin/requestify
+      branch: master
+      shell: "ls /opt"
+    - name: dnsvalidator
+      url: https://github.com/vortexau/dnsvalidator
+      branch: master
+      shell: "cd /opt/dnsvalidator && python3 setup.py install"
