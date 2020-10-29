@@ -1,0 +1,50 @@
+
+- name: Install dnsgen
+  pip:
+    name: dnsgen
+    state: latest
+    executable: pip3
+
+- name: Remove apt wfuzz
+  apt:
+      pkg: wfuzz
+      state: absent
+
+- name: Install wfuzz
+  pip:
+    name: wfuzz
+    state: latest
+    executable: pip3
+
+- name: Remove apt impacket
+  apt:
+    pkg: impacket
+    state: absent
+
+- name: Install impacket
+  pip:
+    name: impacket
+    state: latest
+    executable: pip3
+
+- name: Remove apt crackmapexec
+  apt:
+    pkg: crackmapexec
+    state: absent
+- name: Install crackmapexec
+  pip:
+    name: crackmapexec
+    state: latest
+    executable: pip3
+
+- name: Install ldapdomaindump
+  pip:
+    name: ldapdomaindump
+    state: latest
+    executable: pip3
+
+- name: Install bloodhound-python
+  pip:
+    name: bloodhound
+    state: latest
+    executable: pip3

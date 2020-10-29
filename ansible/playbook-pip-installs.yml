@@ -1,0 +1,4 @@
+- name: Installing pip tools
+  hosts: all
+  roles: 
+   - pip-installs

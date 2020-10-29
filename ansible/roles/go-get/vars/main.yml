@@ -15,7 +15,7 @@ go_get_special:
 go_get:
     - name: gobuster
       url: github.com/OJ/gobuster
-      shell: "ls /usr/share/go-work/bin/"
+      shell: "apt remove gobuster -y"
     - name: ffuf
       url: github.com/ffuf/ffuf
       shell: "ls /usr/share/go-work/bin/"
