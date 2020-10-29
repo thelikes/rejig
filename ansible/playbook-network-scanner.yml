@@ -3,8 +3,7 @@
   roles: 
    - os-update
    - pkgs-base
-   - pkgs-python
-   - pkgs-wireguard
+   - pkgs-cargo
    - oh-my-zsh
    - dotfiles
-   - golang
+   - network-scanner

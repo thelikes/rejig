@@ -8,7 +8,7 @@ resource "vultr_server" "strike" {
     enable_ipv6 = true
     auto_backup = false
     ssh_key_ids = var.vultr_ssh_key_id
-    count = 1
+    count = var.strike_count
 
     provisioner "remote-exec" {
   
@@ -31,17 +31,17 @@ output "Strike_PublicIP" {
     value = vultr_server.strike[*].main_ip
 }
 
-resource "vultr_server" "proxy" {
+resource "vultr_server" "scanner" {
     plan_id = "201"
     region_id = "1"
     os_id = "387"
-    tag = "proxy"
-    hostname = var.proxy_img_name
-    label = var.proxy_img_name
+    tag = "scanner"
+    hostname = var.scanner_img_name
+    label = var.scanner_img_name
     enable_ipv6 = true
     auto_backup = false
     ssh_key_ids = var.vultr_ssh_key_id
-    count = 0
+    count = var.scanner_count
 
     provisioner "remote-exec" {
   
@@ -56,10 +56,43 @@ resource "vultr_server" "proxy" {
     }
 
     provisioner "local-exec" {
-        command = "ansible-playbook -u root -i '${self.main_ip}', --private-key ${var.vultr_key_path} ../ansible/playbook-foundation.yml --vault-password-file ${var.my_vualt_file}"
+        command = "ansible-playbook -u root -i '${self.main_ip}', --private-key ${var.vultr_key_path} ../ansible/playbook-network-scanner.yml --vault-password-file ${var.my_vualt_file}"
     }
 }
 
-output "Proxy_PublicIP" {
-    value = vultr_server.proxy[*].main_ip
+output "Scanner_PublicIP" {
+    value = vultr_server.scanner[*].main_ip
+}
+
+resource "vultr_server" "vpn" {
+    plan_id = "201"
+    region_id = "1"
+    os_id = "387"
+    tag = "vpn"
+    hostname = var.vpn_img_name
+    label = var.vpn_img_name
+    enable_ipv6 = true
+    auto_backup = false
+    ssh_key_ids = var.vultr_ssh_key_id
+    count = var.vpn_count
+
+    provisioner "remote-exec" {
+  
+        inline = ["apt update && apt install python -y"]
+
+        connection {
+            type = "ssh"
+            user = "root"
+            private_key = "${file(var.vultr_key_path)}"
+            host = self.main_ip
+        }
+    }
+
+    provisioner "local-exec" {
+        command = "ansible-playbook -u root -i '${self.main_ip}', --private-key ${var.vultr_key_path} ../ansible/playbook-vpn.yml --vault-password-file ${var.my_vualt_file}"
+    }
+}
+
+output "VPN_PublicIP" {
+    value = vultr_server.vpn[*].main_ip
 }

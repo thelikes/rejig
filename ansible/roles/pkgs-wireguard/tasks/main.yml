@@ -1,0 +1,38 @@
+# https://linuxize.com/post/how-to-set-up-wireguard-vpn-on-ubuntu-18-04/#server-networking-and-firewall-configuration
+
+- name: wireguard
+  apt:
+      name: wireguard
+      state: present
+
+- name: wireguard key generation
+  shell: "wg genkey | sudo tee /etc/wireguard/privatekey | wg pubkey | sudo tee /etc/wireguard/publickey"
+
+- name: wireguard conf file
+  copy: 
+    src: wg0.conf
+    dest: /etc/wireguard/wg0.conf
+
+- name: wireguard set private key
+  shell: "key=$(cat /etc/wireguard/privatekey) && sed -i.orig \"s,SERVER_PRIVATE_KEY,$key,g\" /etc/wireguard/wg0.conf"
+
+- name: wireguard set permission
+  file: 
+    path: /etc/wireguard/privatekey
+    owner: root
+    group: root
+    mode: '600'
+  file: 
+    path: /etc/wireguard/wg0.conf
+    owner: root
+    group: root
+    mode: '600'
+
+- name: wireguard online
+  shell: "wg-quick up wg0"
+
+- name: wireguard network configure
+  shell: "echo \"net.ipv4.ip_forward=1\" >> /etc/sysctl.conf && sysctl -p"
+
+- name: wireguard network firewall
+  shell: "ufw allow 51820/udp"

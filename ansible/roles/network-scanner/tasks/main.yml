@@ -1,0 +1,14 @@
+- name: install nmap
+  apt:
+      name: nmap
+      state: present
+
+- name: install masscan
+  apt:
+      name: masscan
+      state: present
+
+# dog slow
+#- name: install rustscan
+#  shell: "cargo install rustscan && echo \"export PATH=$PATH:/root/.cargo/bin\" > /root/.zshrc"
+

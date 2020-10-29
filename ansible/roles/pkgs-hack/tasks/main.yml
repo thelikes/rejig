@@ -13,16 +13,6 @@
       name: tree
       state: present
 
-- name: install nmap
-  apt:
-      name: nmap
-      state: present
-
-- name: install masscan
-  apt:
-      name: masscan
-      state: present
-
 - name: install nfs-common
   apt:
       name: nfs-common
@@ -36,16 +26,6 @@
 - name: install libffi-dev
   apt:
       name: libffi-dev
-      state: present
-
-- name: install python-dev
-  apt:
-      name: python-dev
-      state: present
-
-- name: install build-essential
-  apt:
-      name: build-essential
       state: present
 
 - name: install whois

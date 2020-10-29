@@ -1,6 +1,10 @@
 - name: attack setup
   hosts: all
   roles: 
-   - hackpkgs
+   - network-scanner
+   - pkgs-cargo
+   - pkgs-hack
    - go-get
    - msf-install
+
+- import_playbook: playbook-pop-opt.yml
