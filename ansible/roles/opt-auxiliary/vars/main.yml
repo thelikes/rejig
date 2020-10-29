@@ -36,3 +36,7 @@ git_repos:
       url: https://github.com/gwen001/github-search
       branch: master
       shell: "ls /opt/auxiliary"
+    - name: Enum4LinuxPy
+      url: https://github.com/0v3rride/Enum4LinuxPy
+      branch: master
+      shell: "ls /opt/auxiliary"
