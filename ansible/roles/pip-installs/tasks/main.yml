@@ -31,6 +31,12 @@
   apt:
     pkg: crackmapexec
     state: absent
+# hack: current cme doesn't work with greenlet v0.4.17
+- name: Install greenlet
+  pip:
+    name: greenlet
+    version: 0.4.16
+    executable: pip3
 - name: Install crackmapexec
   pip:
     name: crackmapexec
