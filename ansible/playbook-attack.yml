@@ -6,6 +6,8 @@
    - pkgs-hack
    - go-get
    - msf-install
+     # *not* kali
+     when: "ansible_lsb.major_release != '2020'"
 
 - import_playbook: playbook-pop-opt.yml
-- import_playbook: playbook-pip-installs
+- import_playbook: playbook-pip-installs.yml
