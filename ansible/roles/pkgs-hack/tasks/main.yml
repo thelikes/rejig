@@ -88,30 +88,36 @@
   apt:
       name: mysql-client
       state: present
+  ignore_errors: yes
 
 - name: install postgresql-contrib
   apt:
       name: postgresql-contrib
       state: present
+  ignore_errors: yes
 
 - name: hydra
   apt:
       name: hydra
       state: present
+  ignore_errors: yes
 
 - name: medusa
   apt:
       name: medusa
       state: present
+  ignore_errors: yes
 
 - name: default-jdk
   apt:
       name: default-jdk
       state: present
+  ignore_errors: yes
 
 - name: install socat
   apt:
       name: socat
       state: present
+  ignore_errors: yes
 
 
