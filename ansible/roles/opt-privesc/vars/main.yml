@@ -12,12 +12,15 @@ git_repos:
       url: https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
       branch: master
       shell: "ls /opt"
-    # linpeas, winpeas
     - name: linux-smart-enumeration
       url: https://github.com/diego-treitos/linux-smart-enumeration
       branch: master
       shell: "ls /opt"
     - name: PrivescCheck
       url: https://github.com/itm4n/PrivescCheck
+      branch: master
+      shell: "ls /opt"
+    - name: privilege-escalation-awesome-scripts-suite
+      url: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
       branch: master
       shell: "ls /opt"
