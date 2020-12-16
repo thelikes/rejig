@@ -40,3 +40,7 @@ git_repos:
       url: https://github.com/0v3rride/Enum4LinuxPy
       branch: master
       shell: "ls /opt/auxiliary"
+    - name: relative-url-extractor
+      url: https://github.com/jobertabma/relative-url-extractor
+      branch: master
+      shell: "ls /opt/auxiliary"
