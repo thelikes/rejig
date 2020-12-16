@@ -5,6 +5,11 @@
       name: wireguard
       state: present
 
+- name: ufw
+  apt:
+      name: ufw
+      state: present
+
 - name: wireguard key generation
   shell: "wg genkey | sudo tee /etc/wireguard/privatekey | wg pubkey | sudo tee /etc/wireguard/publickey"
 
