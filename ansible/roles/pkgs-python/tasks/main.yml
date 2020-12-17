@@ -8,21 +8,24 @@
       name: python
       state: present
 
-- name: Install python-pip (Bionic Beaver)
+- name: Install python-pip 
   apt:
       name: python-pip
       state: present
-  when: "ansible_lsb.major_release == '18'"
+  # when *not* kali
+  when: ansible_lsb.id != "Kali"
 
-- name: Install python-pip-whl (Kali 2020)
+- name: Install python-pip-whl
   apt:
       name: python-pip-whl
       state: present
-  when: "ansible_lsb.major_release == '2020'"
+  # when *is* kali
+  when: ansible_lsb.id == "Kali"
 
-- name: Install python-pip (Focal Fossa)
-  shell: "mkdir -p /opt/install/pip2 && curl https://bootstrap.pypa.io/get-pip.py --output /opt/install/pip2/get-pip.py && python2 /opt/install/pip2/get-pip.py"
-  when: "ansible_lsb.major_release == '20'"
+# if ubuntu 20 doesn't have python-pip or python-pip-whl, install pip2 manually
+#- name: Install python-pip (Focal Fossa)
+#  shell: "mkdir -p /opt/install/pip2 && curl https://bootstrap.pypa.io/get-pip.py --output /opt/install/pip2/get-pip.py && python2 /opt/install/pip2/get-pip.py"
+#  when: "ansible_lsb.major_release == '20'"
 
 - name: install python3
   apt:

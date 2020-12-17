@@ -15,11 +15,13 @@
   file:
     path: /opt/install/msf
     state: directory
+  when: ansible_lsb.id != "Kali"
 
 - name: Create msf install file
   uri:
     url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb
     dest: /opt/install/msf/msfinstall
+  when: ansible_lsb.id != "Kali"
 
 - name: Set msf install file executable
   file: 
@@ -27,20 +29,25 @@
     owner: root
     group: root
     mode: '755'
+  when: ansible_lsb.id != "Kali"
 
 - name: Install msf
   command: bash /opt/install/msf/msfinstall
+  when: ansible_lsb.id != "Kali"
 
 - name: Create msf user
   command: useradd -m msf
+  when: ansible_lsb.id != "Kali"
 
 - name: Configure msf
   command: "su - msf -c 'msfdb init --use-defaults --component database'"
+  when: ansible_lsb.id != "Kali"
 
 - name: Create local .msf4
   file:
     path: /root/.msf4
     state: directory
+  when: ansible_lsb.id != "Kali"
 
 - name: Copy msf config
   copy:
@@ -49,3 +56,4 @@
     dest: /root/.msf4/database.yml
     owner: root
     group: root
+  when: ansible_lsb.id != "Kali"
