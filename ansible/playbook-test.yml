@@ -1,0 +1,10 @@
+
+- name: Installing go tools
+  gather_facts: true
+  hosts: all
+  tasks:
+  - name: test
+    shell: "touch /tmp/zzz3"
+    when: ansible_lsb.id != "Kali"
+    # the following should work when using ansible 2.9
+    #when: ansible_distribution == "Kali GNU/Linux"
