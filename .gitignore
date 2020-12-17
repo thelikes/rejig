@@ -1,6 +1,7 @@
 .*.un~
 .*.swp
 *.retry
+variables.tf
 secrets.tf
 .terraform
 terraform.tfstate
