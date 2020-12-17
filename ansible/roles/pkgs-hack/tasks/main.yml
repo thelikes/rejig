@@ -58,6 +58,7 @@
       name: chromium-browser
       state: present
   ignore_errors: yes
+  when: ansible_lsb.id != "Kali"
 
 - name: install dos2unix
   apt:
