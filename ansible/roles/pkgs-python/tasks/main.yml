@@ -1,7 +1,7 @@
 - name: Get Facts
   debug:
       msg: 
-        -  "ansible_lsb.major_release: {{ansible_lsb.major_release}}"
+        -  "ansible_lsb.id: {{ansible_lsb.id}}"
 
 - name: install python
   apt:
