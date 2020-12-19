@@ -3,6 +3,7 @@ git_repos:
     - name: exploitdb
       url: https://github.com/offensive-security/exploitdb.git
       branch: master
+      shell: "ls /opt/utils"
       # ... don't want to run `when` on all items
       #shell: "ln -sf /opt/utils/exploitdb/searchsploit /usr/local/bin/searchsploit && cp -n /opt/utils/exploitdb/.searchsploit_rc ~/"
       # *not* kali
