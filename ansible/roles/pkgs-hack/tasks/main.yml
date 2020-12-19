@@ -90,6 +90,14 @@
       name: mysql-client
       state: present
   ignore_errors: yes
+  when: ansible_lsb.id != "Kali"
+
+- name: install default-mysql-client
+  apt:
+      name: default-mysql-client
+      state: present
+  ignore_errors: yes
+  when: ansible_lsb.id == "Kali"
 
 - name: install postgresql-contrib
   apt:
