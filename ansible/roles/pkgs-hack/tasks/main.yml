@@ -59,6 +59,10 @@
       state: present
   ignore_errors: yes
   when: ansible_lsb.id != "Kali"
+# apt install snapd
+# systemctl start snapd.service
+# systemctl enable snapd.service
+# snap install chomium
 
 - name: install dos2unix
   apt:
