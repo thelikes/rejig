@@ -12,3 +12,7 @@ git_repos:
       url: https://github.com/milo2012/pathbrute
       branch: master
       shell: "ls /opt/fuzzers"
+    - name: dnscan
+      url: https://github.com/rbsec/dnscan
+      branch: master
+      shell: "ls /opt/fuzzers"
