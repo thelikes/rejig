@@ -2,7 +2,7 @@
   hosts: all
   roles: 
    - network-scanner
-   - pkgs-cargo
+#   - pkgs-cargo
    - pkgs-hack
    - go-get
    - msf-install
