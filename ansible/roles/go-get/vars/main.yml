@@ -72,6 +72,9 @@ go_get:
     - name: comb
       url: github.com/tomnomnom/comb
       shell: "ls /usr/share/go-work/bin/"
+    - name: qsreplace
+      url: github.com/tomnomnom/qsreplace
+      shell: "ls /usr/share/go-work/bin/"
 #    - name: gowitness
 #      url: github.com/sensepost/gowitness
 #      shell: "ls /usr/share/go-work/bin/"

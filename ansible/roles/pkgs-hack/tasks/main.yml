@@ -133,4 +133,8 @@
       state: present
   ignore_errors: yes
 
-
+- name: install poppler-utils
+  apt:
+      name: poppler-utils
+      state: present
+  ignore_errors: yes
