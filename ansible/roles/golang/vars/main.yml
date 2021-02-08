@@ -1,5 +1,5 @@
 ---
-go_download_location: "https://golang.org/dl/go1.15.3.linux-amd64.tar.gz"
+go_download_location: "https://golang.org/dl/go1.15.8.linux-amd64.tar.gz"
 go_install_location: "/opt/install/golang/"
-go_tarball: "go1.15.3.linux-amd64.tar.gz"
+go_tarball: "go1.15.8.linux-amd64.tar.gz"
 profile: "~/.zshrc"
