@@ -11,7 +11,7 @@
 # manual install
 # if ubuntu 20 doesn't have python-pip or python-pip-whl, install pip2 manually
 - name: Install python-pip
-  shell: "mkdir -p /opt/install/pip2 && curl https://bootstrap.pypa.io/get-pip.py --output /opt/install/pip2/get-pip.py && python2 /opt/install/pip2/get-pip.py"
+  shell: "mkdir -p /opt/install/pip2 && curl https://bootstrap.pypa.io/2.7/get-pip.py --output /opt/install/pip2/get-pip.py && python2 /opt/install/pip2/get-pip.py"
 #  when: "ansible_lsb.major_release == '20'"
 
 - name: install python3
