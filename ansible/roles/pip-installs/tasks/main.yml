@@ -1,4 +1,6 @@
 
+# 2021-10-22 issue with the pip utility (v3) getting overwritten by v2. had to
+# purge python3-pip and reinstall to have both
 - name: Install dnsgen
   pip:
     name: dnsgen
@@ -32,11 +34,12 @@
     pkg: crackmapexec
     state: absent
 # hack: current cme doesn't work with greenlet v0.4.17
-- name: Install greenlet
-  pip:
-    name: greenlet
-    version: 0.4.16
-    executable: pip3
+# see if we can ditch this
+#- name: Install greenlet
+#  pip:
+#    name: greenlet
+#    version: 0.4.16
+#    executable: pip3
 - name: Install crackmapexec
   pip:
     name: crackmapexec

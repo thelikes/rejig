@@ -18,7 +18,7 @@ go_get:
       shell: "apt remove gobuster -y"
     - name: ffuf
       url: github.com/ffuf/ffuf
-      shell: "ls /usr/share/go-work/bin/"
+      shell: "apt remove ffuf -y"
 #    - name: gwdomains module
 #      url: github.com/thelikes/gwdomains
 #      GO111MODULE: "on"
@@ -83,9 +83,6 @@ go_get:
       shell: "ls /usr/share/go-work/bin/"
     - name: hakrawler
       url: github.com/hakluke/hakrawler
-      shell: "ls /usr/share/go-work/bin/"
-    - name: wildcheck
-      url: github.com/theblackturtle/wildcheck
       shell: "ls /usr/share/go-work/bin/"
     - name: gospider
       url: github.com/jaeles-project/gospider

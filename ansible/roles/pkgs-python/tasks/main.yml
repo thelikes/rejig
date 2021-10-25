@@ -26,7 +26,7 @@
 
 - name: install python-dev
   apt:
-      name: python-dev
+      name: python3-dev
       state: present
 
 - name: install build-essential
