@@ -6,3 +6,12 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 
 /root/.rbenv/versions/3.0.0/bin/gem install wpscan
+
+
+---
+
+source: https://mediatemple.net/blog/web-development-tech/why-and-how-to-install-wpscan-for-wordpress-security/
+
+apt-get install libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential
+
+gem install wpscan

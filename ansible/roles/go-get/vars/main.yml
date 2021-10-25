@@ -113,3 +113,7 @@ go_get:
     - name: kerbrute
       url: github.com/ropnop/kerbrute
       shell: "ls /usr/share/go-work/bin/"
+    - name: puredns
+      url: github.com/d3mondev/puredns/v2
+      GO111MODULE: "on"
+      shell: "ls /usr/share/go-work/bin/puredns"
