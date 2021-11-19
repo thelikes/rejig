@@ -48,11 +48,6 @@
       name: hydra
       state: present
 
-- name: install jq
-  apt:
-      name: jq
-      state: present
-
 - name: install chromium-browser
   apt:
       name: chromium-browser

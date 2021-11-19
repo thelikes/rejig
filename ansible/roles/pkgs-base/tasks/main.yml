@@ -43,3 +43,8 @@
       name: ufw
       state: present
 
+- name: install jq
+  apt:
+      name: jq
+      state: present
+
