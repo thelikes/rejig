@@ -48,3 +48,8 @@
       name: jq
       state: present
 
+- name: Install certbot
+  apt:
+      name: certbot
+      state: present
+
