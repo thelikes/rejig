@@ -38,3 +38,8 @@
       name: htop
       state: present
 
+- name: ufw
+  apt:
+      name: ufw
+      state: present
+
