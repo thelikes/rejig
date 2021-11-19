@@ -1,0 +1,25 @@
+- name: Install Nginx
+  apt:
+      name: nginx
+      state: present
+
+- name: Install PHP
+  apt:
+      name: php8.0
+      state: present
+
+- name: Install PHP FPM
+  apt:
+      name: php8.0-fpm 
+      state: present
+
+- name: Install PHP Cli
+  apt:
+      name: php8.0-cli
+      state: present
+
+# ufw allow 80/tcp
+# ufw allow 443/tcp
+# systemctl stop apache2.service
+# systemctl disable apache2.service
+# certbot certonly --agree-tos --standalone -m it@domain.com -d sub.domain.com
