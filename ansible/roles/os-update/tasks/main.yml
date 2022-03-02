@@ -28,7 +28,7 @@
       sleep: 5
       delay: 5
       timeout: 300
-      when: task_result is changed
+  when: task_result is changed
 
 - ping:
 
