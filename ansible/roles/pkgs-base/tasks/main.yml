@@ -2,54 +2,65 @@
   apt:
       name: zsh
       state: present
+  become: yes
 
 - name: install tmux
   apt:
       name: tmux
       state: present
+  become: yes
 
 - name: install curl
   apt:
       name: curl
       state: present
+  become: yes
 
 - name: install vim
   apt:
       name: vim
       state: present
+  become: yes
 
 - name: install rsync
   apt:
       name: rsync
       state: present
+  become: yes
 
 - name: install git
   apt:
       name: git
       state: present
+  become: yes
 
 - name: install unattended-upgrades
   apt:
       name: unattended-upgrades
       state: present
+  become: yes
 
 - name: htop
   apt:
       name: htop
       state: present
+  become: yes
 
-- name: ufw
+- name: unzip
   apt:
-      name: ufw
+      name: unzip
       state: present
+  become: yes
 
 - name: install jq
   apt:
       name: jq
       state: present
+  become: yes
 
 - name: Install certbot
   apt:
       name: certbot
       state: present
+  become: yes
 

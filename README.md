@@ -92,10 +92,11 @@ and instead just run ansible. Ansible can be run on its own by feeding it
 a "playbook", a host, user, and SSH key. There are many ways to do this, one of
 the most straight forward being:
 
-```
-ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml -e 'ansible_python_interpreter=/usr/bin/python3'
-# for kali 2020.4 , python3 symlink appears to not be satisfactory for ansible
-ansible-playbook -u <user> -i <ip addr>, --private-key <priv key> <playbook>.yml -e 'ansible_python_interpreter=/usr/bin/python3.9'
+```bash
+ansible-playbook -u <user> -i 1.2.3.4, \
+  --private-key <priv key> \
+  -e 'ansible_python_interpreter=/usr/bin/python3' \
+  <playbook>.yml
 ```
 
 ## Specifics

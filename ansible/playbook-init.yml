@@ -1,0 +1,9 @@
+- name: Updating OS
+  hosts: all
+  roles: 
+   - os-update
+
+- name: Installing base packages
+  hosts: all
+  roles: 
+   - pkgs-base
